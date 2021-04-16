@@ -16,5 +16,10 @@ namespace ClothesShop
         {
             InitializeComponent();
         }
+        
+        void Button1Click(object sender, EventArgs e)
+        {
+			label1.Text = "Horee";       	
+        }
     }
 }
