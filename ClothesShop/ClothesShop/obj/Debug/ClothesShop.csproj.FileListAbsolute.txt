@@ -4,9 +4,10 @@ C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\ClothesShop.
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\ClothesShop.exe
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\ClothesShop.pdb
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.csprojAssemblyReference.cache
-C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.Form1.resources
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.Properties.Resources.resources
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.csproj.GenerateResource.cache
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.exe
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.pdb
+C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.Login.resources
+C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.Splash.resources

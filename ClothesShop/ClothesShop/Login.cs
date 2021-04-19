@@ -16,5 +16,15 @@ namespace ClothesShop
         {
             InitializeComponent();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void closebtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
