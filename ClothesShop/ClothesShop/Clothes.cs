@@ -2,7 +2,7 @@
  * Created by SharpDevelop.
  * User: Sugi_Huang
  * Date: 20/04/2021
- * Time: 16:31
+ * Time: 15:18
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
@@ -19,11 +19,11 @@ using System.Windows.Forms;
 namespace ClothesShop
 {
 	/// <summary>
-	/// Description of Users.
+	/// Description of Clothes.
 	/// </summary>
-	public partial class Users : Form
+	public partial class Clothes : Form
 	{
-		public Users()
+		public Clothes()
 		{
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.

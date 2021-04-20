@@ -2,13 +2,13 @@
  * Created by SharpDevelop.
  * User: Sugi_Huang
  * Date: 20/04/2021
- * Time: 15:18
+ * Time: 16:43
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 namespace ClothesShop
 {
-	partial class Clothes
+	partial class Dashboard
 	{
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.
@@ -36,7 +36,7 @@ namespace ClothesShop
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clothes));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.label12 = new System.Windows.Forms.Label();
@@ -56,9 +56,6 @@ namespace ClothesShop
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
-			this.panel3 = new System.Windows.Forms.Panel();
-			this.label6 = new System.Windows.Forms.Label();
-			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.panel6 = new System.Windows.Forms.Panel();
 			this.label9 = new System.Windows.Forms.Label();
@@ -69,14 +66,15 @@ namespace ClothesShop
 			this.panel4 = new System.Windows.Forms.Panel();
 			this.label7 = new System.Windows.Forms.Label();
 			this.pictureBox4 = new System.Windows.Forms.PictureBox();
+			this.panel3 = new System.Windows.Forms.Panel();
+			this.label6 = new System.Windows.Forms.Label();
+			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-			this.panel3.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.panel6.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -84,6 +82,8 @@ namespace ClothesShop
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
 			this.panel4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+			this.panel3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -112,7 +112,7 @@ namespace ClothesShop
 			this.panel2.Margin = new System.Windows.Forms.Padding(2);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(767, 536);
-			this.panel2.TabIndex = 3;
+			this.panel2.TabIndex = 5;
 			// 
 			// dataGridView1
 			// 
@@ -314,40 +314,6 @@ namespace ClothesShop
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Clothes Shop";
 			// 
-			// panel3
-			// 
-			this.panel3.BackColor = System.Drawing.Color.Black;
-			this.panel3.Controls.Add(this.label6);
-			this.panel3.Controls.Add(this.pictureBox3);
-			this.panel3.Location = new System.Drawing.Point(15, 101);
-			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(176, 43);
-			this.panel3.TabIndex = 11;
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.label6.Location = new System.Drawing.Point(44, 10);
-			this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(88, 24);
-			this.label6.TabIndex = 11;
-			this.label6.Text = "Clothes";
-			// 
-			// pictureBox3
-			// 
-			this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-			this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-			this.pictureBox3.Location = new System.Drawing.Point(12, 4);
-			this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-			this.pictureBox3.Name = "pictureBox3";
-			this.pictureBox3.Size = new System.Drawing.Size(25, 37);
-			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox3.TabIndex = 11;
-			this.pictureBox3.TabStop = false;
-			// 
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.Gray;
@@ -361,7 +327,7 @@ namespace ClothesShop
 			this.panel1.Margin = new System.Windows.Forms.Padding(2);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(208, 536);
-			this.panel1.TabIndex = 2;
+			this.panel1.TabIndex = 4;
 			// 
 			// panel6
 			// 
@@ -465,6 +431,40 @@ namespace ClothesShop
 			this.pictureBox4.TabIndex = 11;
 			this.pictureBox4.TabStop = false;
 			// 
+			// panel3
+			// 
+			this.panel3.BackColor = System.Drawing.Color.Black;
+			this.panel3.Controls.Add(this.label6);
+			this.panel3.Controls.Add(this.pictureBox3);
+			this.panel3.Location = new System.Drawing.Point(15, 101);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(176, 43);
+			this.panel3.TabIndex = 11;
+			// 
+			// label6
+			// 
+			this.label6.AutoSize = true;
+			this.label6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.label6.Location = new System.Drawing.Point(44, 10);
+			this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(88, 24);
+			this.label6.TabIndex = 11;
+			this.label6.Text = "Clothes";
+			// 
+			// pictureBox3
+			// 
+			this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+			this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+			this.pictureBox3.Location = new System.Drawing.Point(12, 4);
+			this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+			this.pictureBox3.Name = "pictureBox3";
+			this.pictureBox3.Size = new System.Drawing.Size(25, 37);
+			this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox3.TabIndex = 11;
+			this.pictureBox3.TabStop = false;
+			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
@@ -489,7 +489,7 @@ namespace ClothesShop
 			this.pictureBox2.TabIndex = 11;
 			this.pictureBox2.TabStop = false;
 			// 
-			// Clothes
+			// Dashboard
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -498,17 +498,14 @@ namespace ClothesShop
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Name = "Clothes";
+			this.Name = "Dashboard";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "Clothes";
+			this.Text = "Dashboard";
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-			this.panel3.ResumeLayout(false);
-			this.panel3.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.panel6.ResumeLayout(false);
@@ -520,32 +517,26 @@ namespace ClothesShop
 			this.panel4.ResumeLayout(false);
 			this.panel4.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+			this.panel3.ResumeLayout(false);
+			this.panel3.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			this.ResumeLayout(false);
 		}
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Label label12;
-		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.PictureBox pictureBox7;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.Label label11;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.Label label8;
-		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.PictureBox pictureBox2;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.PictureBox pictureBox3;
 		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.PictureBox pictureBox4;
+		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.PictureBox pictureBox5;
+		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Panel panel5;
 		private System.Windows.Forms.PictureBox pictureBox6;
+		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Panel panel6;
-		private System.Windows.Forms.PictureBox pictureBox3;
-		private System.Windows.Forms.PictureBox pictureBox2;
-		private System.Windows.Forms.Panel panel3;
-		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox1;
@@ -553,9 +544,18 @@ namespace ClothesShop
 		private System.Windows.Forms.TextBox textBox2;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label closebtn;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.PictureBox pictureBox7;
+		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Panel panel2;
 	}
 }
