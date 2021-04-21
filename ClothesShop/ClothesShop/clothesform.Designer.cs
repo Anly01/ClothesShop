@@ -38,6 +38,8 @@ namespace ClothesShop
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(clothesform));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -71,8 +73,6 @@ namespace ClothesShop
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -116,6 +116,30 @@ namespace ClothesShop
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(960, 712);
             this.panel2.TabIndex = 5;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Red;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(759, 312);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(182, 46);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "Delete";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DimGray;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(559, 312);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(182, 46);
+            this.button5.TabIndex = 27;
+            this.button5.Text = "Edit";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // comboBox1
             // 
@@ -484,30 +508,6 @@ namespace ClothesShop
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(759, 312);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(182, 46);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Delete";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.DimGray;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(559, 312);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(182, 46);
-            this.button5.TabIndex = 27;
-            this.button5.Text = "Edit";
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // clothesform
             // 
