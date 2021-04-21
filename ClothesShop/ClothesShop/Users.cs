@@ -34,5 +34,5 @@ namespace ClothesShop
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-	}
+    }
 }

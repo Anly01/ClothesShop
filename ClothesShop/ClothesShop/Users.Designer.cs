@@ -40,7 +40,6 @@ namespace ClothesShop
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.label12 = new System.Windows.Forms.Label();
-			this.label5 = new System.Windows.Forms.Label();
 			this.closebtn = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -79,23 +78,22 @@ namespace ClothesShop
 			this.panel2.BackColor = System.Drawing.Color.White;
 			this.panel2.Controls.Add(this.dataGridView1);
 			this.panel2.Controls.Add(this.label12);
-			this.panel2.Controls.Add(this.label5);
 			this.panel2.Controls.Add(this.closebtn);
 			this.panel2.Controls.Add(this.pictureBox1);
 			this.panel2.Controls.Add(this.label1);
 			this.panel2.Location = new System.Drawing.Point(216, 11);
 			this.panel2.Margin = new System.Windows.Forms.Padding(2);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(767, 536);
+			this.panel2.Size = new System.Drawing.Size(640, 465);
 			this.panel2.TabIndex = 5;
 			// 
 			// dataGridView1
 			// 
 			this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(8, 112);
+			this.dataGridView1.Location = new System.Drawing.Point(8, 123);
 			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(745, 408);
+			this.dataGridView1.Size = new System.Drawing.Size(620, 327);
 			this.dataGridView1.TabIndex = 20;
 			// 
 			// label12
@@ -103,24 +101,12 @@ namespace ClothesShop
 			this.label12.AutoSize = true;
 			this.label12.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label12.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.label12.Location = new System.Drawing.Point(334, 85);
+			this.label12.Location = new System.Drawing.Point(273, 83);
 			this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(93, 24);
 			this.label12.TabIndex = 19;
 			this.label12.Text = "Users List";
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Century Gothic", 12F);
-			this.label5.ForeColor = System.Drawing.Color.Black;
-			this.label5.Location = new System.Drawing.Point(746, 3);
-			this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(19, 21);
-			this.label5.TabIndex = 10;
-			this.label5.Text = "X";
 			// 
 			// closebtn
 			// 
@@ -138,7 +124,7 @@ namespace ClothesShop
 			// 
 			this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(357, 29);
+			this.pictureBox1.Location = new System.Drawing.Point(295, 29);
 			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(54, 37);
@@ -151,7 +137,7 @@ namespace ClothesShop
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.label1.Location = new System.Drawing.Point(310, 3);
+			this.label1.Location = new System.Drawing.Point(252, 4);
 			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(145, 24);
@@ -170,12 +156,12 @@ namespace ClothesShop
 			this.panel1.Location = new System.Drawing.Point(11, 11);
 			this.panel1.Margin = new System.Windows.Forms.Padding(2);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(208, 536);
+			this.panel1.Size = new System.Drawing.Size(208, 465);
 			this.panel1.TabIndex = 4;
 			// 
 			// panel6
 			// 
-			this.panel6.BackColor = System.Drawing.Color.Transparent;
+			this.panel6.BackColor = System.Drawing.Color.Red;
 			this.panel6.Controls.Add(this.label9);
 			this.panel6.Controls.Add(this.pictureBox6);
 			this.panel6.Location = new System.Drawing.Point(15, 314);
@@ -277,7 +263,7 @@ namespace ClothesShop
 			// 
 			// panel3
 			// 
-			this.panel3.BackColor = System.Drawing.Color.Gray;
+			this.panel3.BackColor = System.Drawing.Color.Transparent;
 			this.panel3.Controls.Add(this.label6);
 			this.panel3.Controls.Add(this.pictureBox3);
 			this.panel3.Location = new System.Drawing.Point(15, 101);
@@ -338,7 +324,7 @@ namespace ClothesShop
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.LightGray;
-			this.ClientSize = new System.Drawing.Size(994, 558);
+			this.ClientSize = new System.Drawing.Size(867, 487);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -384,7 +370,6 @@ namespace ClothesShop
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label closebtn;
-		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Panel panel2;

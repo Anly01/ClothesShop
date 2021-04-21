@@ -38,17 +38,16 @@ namespace ClothesShop
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.label10 = new System.Windows.Forms.Label();
+			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.label5 = new System.Windows.Forms.Label();
+			this.textBox3 = new System.Windows.Forms.TextBox();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.label12 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.pictureBox7 = new System.Windows.Forms.PictureBox();
-			this.label11 = new System.Windows.Forms.Label();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.label10 = new System.Windows.Forms.Label();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.label5 = new System.Windows.Forms.Label();
 			this.closebtn = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
@@ -90,17 +89,16 @@ namespace ClothesShop
 			// panel2
 			// 
 			this.panel2.BackColor = System.Drawing.Color.White;
+			this.panel2.Controls.Add(this.label10);
+			this.panel2.Controls.Add(this.textBox4);
+			this.panel2.Controls.Add(this.label5);
+			this.panel2.Controls.Add(this.textBox3);
 			this.panel2.Controls.Add(this.dataGridView1);
 			this.panel2.Controls.Add(this.label12);
 			this.panel2.Controls.Add(this.button1);
 			this.panel2.Controls.Add(this.button3);
 			this.panel2.Controls.Add(this.button2);
 			this.panel2.Controls.Add(this.pictureBox7);
-			this.panel2.Controls.Add(this.label11);
-			this.panel2.Controls.Add(this.textBox4);
-			this.panel2.Controls.Add(this.label10);
-			this.panel2.Controls.Add(this.textBox3);
-			this.panel2.Controls.Add(this.label5);
 			this.panel2.Controls.Add(this.closebtn);
 			this.panel2.Controls.Add(this.label3);
 			this.panel2.Controls.Add(this.label2);
@@ -111,8 +109,50 @@ namespace ClothesShop
 			this.panel2.Location = new System.Drawing.Point(216, 11);
 			this.panel2.Margin = new System.Windows.Forms.Padding(2);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(767, 536);
+			this.panel2.Size = new System.Drawing.Size(640, 465);
 			this.panel2.TabIndex = 5;
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.ForeColor = System.Drawing.SystemColors.GrayText;
+			this.label10.Location = new System.Drawing.Point(530, 73);
+			this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(46, 20);
+			this.label10.TabIndex = 24;
+			this.label10.Text = "Price";
+			// 
+			// textBox4
+			// 
+			this.textBox4.Font = new System.Drawing.Font("Century Gothic", 14F);
+			this.textBox4.Location = new System.Drawing.Point(530, 95);
+			this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+			this.textBox4.Name = "textBox4";
+			this.textBox4.Size = new System.Drawing.Size(98, 30);
+			this.textBox4.TabIndex = 23;
+			// 
+			// label5
+			// 
+			this.label5.AutoSize = true;
+			this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
+			this.label5.Location = new System.Drawing.Point(447, 73);
+			this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(71, 20);
+			this.label5.TabIndex = 22;
+			this.label5.Text = "Quantity";
+			// 
+			// textBox3
+			// 
+			this.textBox3.Font = new System.Drawing.Font("Century Gothic", 14F);
+			this.textBox3.Location = new System.Drawing.Point(447, 95);
+			this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+			this.textBox3.Name = "textBox3";
+			this.textBox3.Size = new System.Drawing.Size(69, 30);
+			this.textBox3.TabIndex = 21;
 			// 
 			// dataGridView1
 			// 
@@ -120,7 +160,7 @@ namespace ClothesShop
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Location = new System.Drawing.Point(8, 254);
 			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(745, 266);
+			this.dataGridView1.Size = new System.Drawing.Size(620, 196);
 			this.dataGridView1.TabIndex = 20;
 			// 
 			// label12
@@ -128,7 +168,7 @@ namespace ClothesShop
 			this.label12.AutoSize = true;
 			this.label12.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label12.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.label12.Location = new System.Drawing.Point(323, 214);
+			this.label12.Location = new System.Drawing.Point(261, 214);
 			this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label12.Name = "label12";
 			this.label12.Size = new System.Drawing.Size(122, 24);
@@ -140,7 +180,7 @@ namespace ClothesShop
 			this.button1.BackColor = System.Drawing.Color.DimGray;
 			this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button1.ForeColor = System.Drawing.Color.White;
-			this.button1.Location = new System.Drawing.Point(398, 160);
+			this.button1.Location = new System.Drawing.Point(329, 160);
 			this.button1.Margin = new System.Windows.Forms.Padding(2);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(121, 30);
@@ -153,7 +193,7 @@ namespace ClothesShop
 			this.button3.BackColor = System.Drawing.Color.DimGray;
 			this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button3.ForeColor = System.Drawing.Color.White;
-			this.button3.Location = new System.Drawing.Point(261, 160);
+			this.button3.Location = new System.Drawing.Point(196, 160);
 			this.button3.Margin = new System.Windows.Forms.Padding(2);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(121, 30);
@@ -182,60 +222,6 @@ namespace ClothesShop
 			this.pictureBox7.TabIndex = 15;
 			this.pictureBox7.TabStop = false;
 			// 
-			// label11
-			// 
-			this.label11.AutoSize = true;
-			this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label11.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.label11.Location = new System.Drawing.Point(650, 75);
-			this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(46, 20);
-			this.label11.TabIndex = 14;
-			this.label11.Text = "Price";
-			// 
-			// textBox4
-			// 
-			this.textBox4.Font = new System.Drawing.Font("Century Gothic", 14F);
-			this.textBox4.Location = new System.Drawing.Point(650, 96);
-			this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(104, 30);
-			this.textBox4.TabIndex = 13;
-			// 
-			// label10
-			// 
-			this.label10.AutoSize = true;
-			this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label10.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.label10.Location = new System.Drawing.Point(533, 75);
-			this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(71, 20);
-			this.label10.TabIndex = 12;
-			this.label10.Text = "Quantity";
-			// 
-			// textBox3
-			// 
-			this.textBox3.Font = new System.Drawing.Font("Century Gothic", 14F);
-			this.textBox3.Location = new System.Drawing.Point(533, 96);
-			this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(104, 30);
-			this.textBox3.TabIndex = 11;
-			// 
-			// label5
-			// 
-			this.label5.AutoSize = true;
-			this.label5.Font = new System.Drawing.Font("Century Gothic", 12F);
-			this.label5.ForeColor = System.Drawing.Color.Black;
-			this.label5.Location = new System.Drawing.Point(746, 3);
-			this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(19, 21);
-			this.label5.TabIndex = 10;
-			this.label5.Text = "X";
-			// 
 			// closebtn
 			// 
 			this.closebtn.AutoSize = true;
@@ -253,7 +239,7 @@ namespace ClothesShop
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.label3.Location = new System.Drawing.Point(415, 75);
+			this.label3.Location = new System.Drawing.Point(364, 73);
 			this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(35, 20);
@@ -275,10 +261,10 @@ namespace ClothesShop
 			// textBox2
 			// 
 			this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14F);
-			this.textBox2.Location = new System.Drawing.Point(415, 96);
+			this.textBox2.Location = new System.Drawing.Point(364, 95);
 			this.textBox2.Margin = new System.Windows.Forms.Padding(2);
 			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(104, 30);
+			this.textBox2.Size = new System.Drawing.Size(69, 30);
 			this.textBox2.TabIndex = 4;
 			// 
 			// textBox1
@@ -287,14 +273,14 @@ namespace ClothesShop
 			this.textBox1.Location = new System.Drawing.Point(223, 96);
 			this.textBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(179, 30);
+			this.textBox1.Size = new System.Drawing.Size(128, 30);
 			this.textBox1.TabIndex = 3;
 			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(357, 29);
+			this.pictureBox1.Location = new System.Drawing.Point(295, 29);
 			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(54, 37);
@@ -307,7 +293,7 @@ namespace ClothesShop
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-			this.label1.Location = new System.Drawing.Point(310, 3);
+			this.label1.Location = new System.Drawing.Point(252, 4);
 			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(145, 24);
@@ -326,12 +312,12 @@ namespace ClothesShop
 			this.panel1.Location = new System.Drawing.Point(11, 11);
 			this.panel1.Margin = new System.Windows.Forms.Padding(2);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(208, 536);
+			this.panel1.Size = new System.Drawing.Size(208, 465);
 			this.panel1.TabIndex = 4;
 			// 
 			// panel6
 			// 
-			this.panel6.BackColor = System.Drawing.Color.Transparent;
+			this.panel6.BackColor = System.Drawing.Color.Red;
 			this.panel6.Controls.Add(this.label9);
 			this.panel6.Controls.Add(this.pictureBox6);
 			this.panel6.Location = new System.Drawing.Point(15, 314);
@@ -365,7 +351,7 @@ namespace ClothesShop
 			// 
 			// panel5
 			// 
-			this.panel5.BackColor = System.Drawing.Color.Transparent;
+			this.panel5.BackColor = System.Drawing.Color.Black;
 			this.panel5.Controls.Add(this.label8);
 			this.panel5.Controls.Add(this.pictureBox5);
 			this.panel5.Location = new System.Drawing.Point(15, 219);
@@ -433,7 +419,7 @@ namespace ClothesShop
 			// 
 			// panel3
 			// 
-			this.panel3.BackColor = System.Drawing.Color.Black;
+			this.panel3.BackColor = System.Drawing.Color.Transparent;
 			this.panel3.Controls.Add(this.label6);
 			this.panel3.Controls.Add(this.pictureBox3);
 			this.panel3.Location = new System.Drawing.Point(15, 101);
@@ -494,7 +480,7 @@ namespace ClothesShop
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.LightGray;
-			this.ClientSize = new System.Drawing.Size(994, 558);
+			this.ClientSize = new System.Drawing.Size(867, 487);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -545,17 +531,16 @@ namespace ClothesShop
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label closebtn;
-		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.PictureBox pictureBox7;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Panel panel2;
 	}
 }
