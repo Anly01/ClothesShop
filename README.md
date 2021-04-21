@@ -1,2 +1,2 @@
 # ClothesShop
-Project UAS Kelompok 8 2SIMB
+Project UAS Kelompok 3 2SIMB
