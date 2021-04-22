@@ -58,6 +58,7 @@ namespace ClothesShop
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,6 +77,7 @@ namespace ClothesShop
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.closebtn);
@@ -102,7 +104,7 @@ namespace ClothesShop
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label12.Location = new System.Drawing.Point(410, 128);
+            this.label12.Location = new System.Drawing.Point(412, 132);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(146, 39);
             this.label12.TabIndex = 19;
@@ -123,7 +125,7 @@ namespace ClothesShop
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(442, 64);
+            this.pictureBox1.Location = new System.Drawing.Point(443, 64);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(81, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -135,7 +137,7 @@ namespace ClothesShop
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label1.Location = new System.Drawing.Point(378, 6);
+            this.label1.Location = new System.Drawing.Point(375, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 39);
             this.label1.TabIndex = 1;
@@ -309,6 +311,17 @@ namespace ClothesShop
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(921, 6);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 39);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "X";
+            // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -365,5 +378,6 @@ namespace ClothesShop
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Panel panel2;
-	}
+        private System.Windows.Forms.Label label11;
+    }
 }

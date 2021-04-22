@@ -101,6 +101,12 @@
     <Compile Include="Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usersignup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usersignup.Designer.cs">
+      <DependentUpon>Usersignup.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Clothes.resx">
       <DependentUpon>Clothes.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usersignup.resx">
+      <DependentUpon>Usersignup.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClothesShopDBDataSet.xsc">
       <DependentUpon>ClothesShopDBDataSet.xsd</DependentUpon>

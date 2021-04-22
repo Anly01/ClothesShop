@@ -77,3 +77,5 @@ D:\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.csproj.GenerateReso
 D:\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.exe
 D:\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.pdb
 D:\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.testDB.resources
+C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.testDB.resources
+C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.Usersignup.resources

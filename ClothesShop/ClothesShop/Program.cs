@@ -16,7 +16,7 @@ namespace ClothesShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new testDB());
+            Application.Run(new Usersignup());
         }
     }
 }

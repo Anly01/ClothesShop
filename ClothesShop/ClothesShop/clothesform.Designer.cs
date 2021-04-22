@@ -163,7 +163,7 @@ namespace ClothesShop
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label11.ForeColor = System.Drawing.Color.Red;
             this.label11.Location = new System.Drawing.Point(921, 6);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 39);
@@ -260,7 +260,7 @@ namespace ClothesShop
             this.button2.BackColor = System.Drawing.Color.DimGray;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(69, 237);
+            this.button2.Location = new System.Drawing.Point(73, 237);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(182, 46);
             this.button2.TabIndex = 16;
@@ -270,7 +270,7 @@ namespace ClothesShop
             // pictureBox7
             // 
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox7.Location = new System.Drawing.Point(107, 112);
+            this.pictureBox7.Location = new System.Drawing.Point(108, 112);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(106, 106);
