@@ -1,14 +1,14 @@
 ﻿/*
  * Created by SharpDevelop.
  * User: Sugi_Huang
- * Date: 22/04/2021
- * Time: 14:20
+ * Date: 23/04/2021
+ * Time: 14:39
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 namespace ClothesShop
 {
-	partial class testDB
+	partial class TestDB2
 	{
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.
@@ -41,22 +41,22 @@ namespace ClothesShop
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(39, 79);
+			this.button1.Location = new System.Drawing.Point(79, 115);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(116, 52);
+			this.button1.Size = new System.Drawing.Size(111, 28);
 			this.button1.TabIndex = 0;
-			this.button1.Text = "button1";
+			this.button1.Text = "Test";
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.Button1Click);
 			// 
-			// testDB
+			// TestDB2
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(284, 262);
 			this.Controls.Add(this.button1);
-			this.Name = "testDB";
-			this.Text = "testDB";
+			this.Name = "TestDB2";
+			this.Text = "TestDB2";
 			this.ResumeLayout(false);
 		}
 		private System.Windows.Forms.Button button1;

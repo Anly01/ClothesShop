@@ -38,7 +38,6 @@ C:\Users\Sugi_Huang\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\Clothe
 C:\Users\Sugi_Huang\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.csproj.GenerateResource.Cache
 C:\Users\Sugi_Huang\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.exe
 C:\Users\Sugi_Huang\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.pdb
-C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.Testdb.resources
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\MySql.Data.dll
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\Google.Protobuf.dll
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\Zstandard.Net.dll
@@ -100,3 +99,4 @@ C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\bin\Debug\Dapper.xml
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\bin\Debug\EntityFramework.xml
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\bin\Debug\System.Data.SQLite.xml
+C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.TestDB2.resources
