@@ -37,7 +37,7 @@ namespace ClothesShop
 			SQLiteConnection conn;
 		    conn = new SQLiteConnection("Data Source=birthdays.db;Version=3;");
 		    conn.Open();
-		    SQLiteCommand cmd = new SQLiteCommand("INSERT INTO birthdays(name, day, month) VALUES('Rontin', 25, 12)", conn);
+		    SQLiteCommand cmd = new SQLiteCommand("INSERT INTO birthdays(name, day, month) VALUES('acun', 27, 12)", conn);
 		    cmd.ExecuteNonQuery();
 		    conn.Close();
 		}
