@@ -36,5 +36,19 @@ namespace ClothesShop
         {
             Application.Exit();
         }
+
+        private void label7_Click(object sender, System.EventArgs e)
+        {
+            Users log = new Users();
+            log.Show();
+            this.Hide();
+        }
+
+        private void label8_Click(object sender, System.EventArgs e)
+        {
+            Dashboard log = new Dashboard();
+            log.Show();
+            this.Hide();
+        }
     }
 }

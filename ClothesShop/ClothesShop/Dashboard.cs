@@ -21,5 +21,30 @@ namespace ClothesShop
         {
 
         }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //Click Clothes Menubar
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Clothes log = new Clothes();
+            log.Show();
+            this.Hide();
+        }
+        //click User Menu Bar
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Users log = new Users();
+            log.Show();
+            this.Hide();
+        }
     }
 }

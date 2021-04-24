@@ -38,6 +38,7 @@ namespace ClothesShop
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.closebtn = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@ namespace ClothesShop
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,6 +87,18 @@ namespace ClothesShop
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(960, 715);
             this.panel2.TabIndex = 5;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(921, 6);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 39);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "X";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // dataGridView1
             // 
@@ -211,6 +223,7 @@ namespace ClothesShop
             this.label8.Size = new System.Drawing.Size(192, 39);
             this.label8.TabIndex = 13;
             this.label8.Text = "Dashboard";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // pictureBox5
             // 
@@ -277,6 +290,7 @@ namespace ClothesShop
             this.label6.Size = new System.Drawing.Size(133, 39);
             this.label6.TabIndex = 11;
             this.label6.Text = "Clothes";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // pictureBox3
             // 
@@ -310,17 +324,6 @@ namespace ClothesShop
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(921, 6);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 39);
-            this.label11.TabIndex = 26;
-            this.label11.Text = "X";
             // 
             // Users
             // 

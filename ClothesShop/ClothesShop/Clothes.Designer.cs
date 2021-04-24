@@ -38,6 +38,7 @@ namespace ClothesShop
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clothes));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -73,7 +74,6 @@ namespace ClothesShop
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -118,6 +118,18 @@ namespace ClothesShop
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(960, 712);
             this.panel2.TabIndex = 5;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.ForestGreen;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(360, 312);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(182, 46);
+            this.button6.TabIndex = 29;
+            this.button6.Text = "Refresh";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -411,6 +423,7 @@ namespace ClothesShop
             this.label8.Size = new System.Drawing.Size(192, 39);
             this.label8.TabIndex = 13;
             this.label8.Text = "Dashboard";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // pictureBox5
             // 
@@ -444,6 +457,7 @@ namespace ClothesShop
             this.label7.Size = new System.Drawing.Size(93, 39);
             this.label7.TabIndex = 12;
             this.label7.Text = "Users";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // pictureBox4
             // 
@@ -510,18 +524,6 @@ namespace ClothesShop
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.ForestGreen;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(360, 312);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(182, 46);
-            this.button6.TabIndex = 29;
-            this.button6.Text = "Refresh";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // Clothes
             // 

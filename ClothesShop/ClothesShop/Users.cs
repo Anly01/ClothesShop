@@ -34,5 +34,27 @@ namespace ClothesShop
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+
+		//click clothes menubar
+        private void label6_Click(object sender, EventArgs e)
+        {
+			Clothes log = new Clothes();
+			log.Show();
+			this.Hide();
+		}
+
+		//exit button
+        private void label11_Click(object sender, EventArgs e)
+        {
+			Application.Exit();
+        }
+
+		//click dashboard menubar
+        private void label8_Click(object sender, EventArgs e)
+        {
+			Dashboard log = new Dashboard();
+			log.Show();
+			this.Hide();
+		}
     }
 }

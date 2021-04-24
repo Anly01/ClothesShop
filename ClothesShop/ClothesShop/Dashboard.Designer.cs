@@ -50,6 +50,18 @@ namespace ClothesShop
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -62,6 +74,12 @@ namespace ClothesShop
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -74,6 +92,7 @@ namespace ClothesShop
             this.label6.Size = new System.Drawing.Size(133, 39);
             this.label6.TabIndex = 11;
             this.label6.Text = "Clothes";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label11
             // 
@@ -85,6 +104,7 @@ namespace ClothesShop
             this.label11.Size = new System.Drawing.Size(36, 39);
             this.label11.TabIndex = 25;
             this.label11.Text = "X";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label7
             // 
@@ -96,6 +116,7 @@ namespace ClothesShop
             this.label7.Size = new System.Drawing.Size(93, 39);
             this.label7.TabIndex = 12;
             this.label7.Text = "Users";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // pictureBox4
             // 
@@ -258,9 +279,9 @@ namespace ClothesShop
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(442, 71);
+            this.pictureBox1.Location = new System.Drawing.Point(426, 104);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(81, 57);
+            this.pictureBox1.Size = new System.Drawing.Size(98, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -268,17 +289,20 @@ namespace ClothesShop
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label1.Location = new System.Drawing.Point(378, 18);
+            this.label1.Location = new System.Drawing.Point(354, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 39);
+            this.label1.Size = new System.Drawing.Size(250, 43);
             this.label1.TabIndex = 1;
             this.label1.Text = "Clothes Shop";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel9);
+            this.panel2.Controls.Add(this.panel8);
+            this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.closebtn);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -288,6 +312,141 @@ namespace ClothesShop
             this.panel2.Size = new System.Drawing.Size(960, 712);
             this.panel2.TabIndex = 7;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.DimGray;
+            this.panel9.Controls.Add(this.pictureBox9);
+            this.panel9.Controls.Add(this.label12);
+            this.panel9.Controls.Add(this.label13);
+            this.panel9.Location = new System.Drawing.Point(102, 434);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(336, 155);
+            this.panel9.TabIndex = 28;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(248, 41);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(73, 86);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 29;
+            this.pictureBox9.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(99, 83);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(89, 34);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Stock";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.Location = new System.Drawing.Point(23, 30);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(196, 34);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "Total Amount";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.DimGray;
+            this.panel8.Controls.Add(this.pictureBox8);
+            this.panel8.Controls.Add(this.label5);
+            this.panel8.Controls.Add(this.label10);
+            this.panel8.Location = new System.Drawing.Point(534, 212);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(336, 155);
+            this.panel8.TabIndex = 27;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(260, 51);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(54, 66);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 28;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(100, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 34);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Stock";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(26, 32);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 34);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Users";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.DimGray;
+            this.panel7.Controls.Add(this.label3);
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Controls.Add(this.pictureBox7);
+            this.panel7.Location = new System.Drawing.Point(102, 212);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(336, 155);
+            this.panel7.TabIndex = 26;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(99, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 34);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Stock";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(23, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(200, 34);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Clothes Stock";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(260, 51);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(57, 66);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 11;
+            this.pictureBox7.TabStop = false;
             // 
             // Dashboard
             // 
@@ -318,6 +477,15 @@ namespace ClothesShop
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -344,5 +512,17 @@ namespace ClothesShop
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }
