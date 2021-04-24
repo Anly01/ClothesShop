@@ -41,7 +41,7 @@ namespace ClothesShop
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.userpassword = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -116,7 +116,7 @@ namespace ClothesShop
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.userpassword);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
@@ -183,14 +183,14 @@ namespace ClothesShop
             this.label2.TabIndex = 5;
             this.label2.Text = "Username";
             // 
-            // textBox2
+            // userpassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.textBox2.Location = new System.Drawing.Point(140, 272);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(295, 42);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.userpassword.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.userpassword.Location = new System.Drawing.Point(140, 272);
+            this.userpassword.Name = "userpassword";
+            this.userpassword.Size = new System.Drawing.Size(295, 42);
+            this.userpassword.TabIndex = 4;
+            this.userpassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -252,7 +252,7 @@ namespace ClothesShop
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox userpassword;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label closebtn;
         private System.Windows.Forms.Button button1;

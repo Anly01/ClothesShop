@@ -63,7 +63,7 @@ namespace ClothesShop
     	{
     		if (email == "")
     		{
-    			MessageBox.Show("Fill out the username");
+    			MessageBox.Show("Fill out the Email Address");
     			return false;
     		}
     		else if (!(new EmailAddressAttribute().IsValid(email)))
@@ -108,18 +108,6 @@ namespace ClothesShop
     		}
     	}
     	
-    	static bool checkBirthday(string birthday)
-    	{
-    		if (birthday == "")
-    		{
-    			MessageBox.Show("Fill out the birthday");
-    			return false;
-    		}
-    		else
-    		{
-    			return true;
-    		}
-    	}
     	
         public Usersignup()
         {
@@ -146,11 +134,11 @@ namespace ClothesShop
         	string email = emailBox.Text.Trim();
         	string phone = phoneBox.Text.Trim();
         	string address = addressBox.Text.Trim();
-        	string birthday = birthdayBox.Text.Trim();
+
         	
         	if (checkUsername(currUsername) && checkPassword(password) &&
         	    checkEmail(email) && checkPhone(phone) && 
-        	    checkAddress(address) && checkBirthday(birthday))
+        	    checkAddress(address))
         	{
         		Login log = new Login();
             	log.Show();

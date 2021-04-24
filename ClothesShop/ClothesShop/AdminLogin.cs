@@ -17,6 +17,7 @@ namespace ClothesShop
         public AdminLogin()
         {
             InitializeComponent();
+            adminpasssword.PasswordChar = '●';
         }
 
         //click user login
@@ -30,7 +31,7 @@ namespace ClothesShop
         //click login button
         private void button1_Click(object sender, EventArgs e)
         {
-            adminpasssword.PasswordChar = '*';
+
             string realPassword = SQLAccess.getAdminPassword();
             if (adminpasssword.Text == realPassword)
             {

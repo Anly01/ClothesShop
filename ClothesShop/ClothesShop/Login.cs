@@ -15,6 +15,7 @@ namespace ClothesShop
         public Login()
         {
             InitializeComponent();
+            userpassword.PasswordChar = '●';
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

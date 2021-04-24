@@ -38,7 +38,6 @@ C:\Users\Sugi_Huang\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\Clothe
 C:\Users\Sugi_Huang\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.csproj.GenerateResource.Cache
 C:\Users\Sugi_Huang\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.exe
 C:\Users\Sugi_Huang\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.pdb
-C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\MySql.Data.dll
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\Google.Protobuf.dll
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\Zstandard.Net.dll
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\K4os.Compression.LZ4.Streams.dll
@@ -71,12 +70,6 @@ D:\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.exe
 D:\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.pdb
 D:\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.testDB.resources
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.Usersignup.resources
-C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\Dapper.dll
-C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\EntityFramework.dll
-C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\System.Data.SQLite.dll
-C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\System.Data.SQLite.Linq.dll
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\Dapper.xml
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\EntityFramework.xml
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\EntityFramework.SqlServer.xml
