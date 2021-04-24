@@ -12,6 +12,8 @@ namespace ClothesShop
 {
     public partial class AdminLogin : Form
     {
+    	SQLAccess db = new SQLAccess();
+    	
         public AdminLogin()
         {
             InitializeComponent();
@@ -29,7 +31,8 @@ namespace ClothesShop
         private void button1_Click(object sender, EventArgs e)
         {
             adminpasssword.PasswordChar = '*';
-            if (adminpasssword.Text =="admin")
+            string realPassword = SQLAccess.getAdminPassword();
+            if (adminpasssword.Text == realPassword)
             {
                 Clothes log = new Clothes();
                 log.Show();

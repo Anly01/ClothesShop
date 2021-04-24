@@ -125,6 +125,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sqlAccess.cs" />
     <Compile Include="SqliteDataAccess.cs" />
     <Compile Include="TestDB2.cs">
       <SubType>Form</SubType>

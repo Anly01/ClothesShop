@@ -29,7 +29,7 @@ CREATE TABLE Cloth (
 	size TEXT NOT NULL,
 	quantity INTEGER NOT NULL,
 	adminID INTEGER NOT NULL,
-	img BLOB,
+	image BLOB,
 	PRIMARY KEY (productID),
 	FOREIGN KEY (adminID) REFERENCES Admin (adminID)
 );
