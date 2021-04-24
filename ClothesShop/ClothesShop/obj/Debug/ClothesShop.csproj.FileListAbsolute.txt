@@ -99,3 +99,4 @@ C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\bin\Debug\EntityFramewor
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\bin\Debug\System.Data.SQLite.xml
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.TestDB2.resources
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.TestDB2.resources
+C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.Dashboard.resources

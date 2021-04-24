@@ -29,12 +29,14 @@ namespace ClothesShop
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splash));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.Myprogress = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.PercentageLbl = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,12 +62,13 @@ namespace ClothesShop
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // progressBar1
+            // Myprogress
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 415);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(776, 23);
-            this.progressBar1.TabIndex = 2;
+            this.Myprogress.BackColor = System.Drawing.Color.White;
+            this.Myprogress.Location = new System.Drawing.Point(12, 415);
+            this.Myprogress.Name = "Myprogress";
+            this.Myprogress.Size = new System.Drawing.Size(776, 23);
+            this.Myprogress.TabIndex = 2;
             // 
             // label2
             // 
@@ -78,16 +81,20 @@ namespace ClothesShop
             this.label2.TabIndex = 3;
             this.label2.Text = "Loading ...";
             // 
-            // label3
+            // PercentageLbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(127, 380);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 23);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "%";
+            this.PercentageLbl.AutoSize = true;
+            this.PercentageLbl.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PercentageLbl.ForeColor = System.Drawing.Color.Red;
+            this.PercentageLbl.Location = new System.Drawing.Point(127, 380);
+            this.PercentageLbl.Name = "PercentageLbl";
+            this.PercentageLbl.Size = new System.Drawing.Size(26, 23);
+            this.PercentageLbl.TabIndex = 4;
+            this.PercentageLbl.Text = "%";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Splash
             // 
@@ -95,9 +102,9 @@ namespace ClothesShop
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.PercentageLbl);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.Myprogress);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.DimGray;
@@ -105,6 +112,7 @@ namespace ClothesShop
             this.Name = "Splash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Splash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -115,9 +123,10 @@ namespace ClothesShop
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar Myprogress;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label PercentageLbl;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
