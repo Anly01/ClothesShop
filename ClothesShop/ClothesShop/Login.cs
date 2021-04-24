@@ -42,5 +42,10 @@ namespace ClothesShop
             log.Show();
             this.Hide();
         }
+
+        private void showpasswordBox_CheckedChanged(object sender, EventArgs e)
+        {
+            userpassword.PasswordChar = showpasswordBox.Checked ? '\0' : '●';
+        }
     }
 }

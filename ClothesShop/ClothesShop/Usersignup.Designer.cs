@@ -38,6 +38,7 @@ namespace ClothesShop
             this.label4 = new System.Windows.Forms.Label();
             this.closebtn = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.birthdayBox = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.emailBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,7 +46,7 @@ namespace ClothesShop
             this.label6 = new System.Windows.Forms.Label();
             this.addressBox = new System.Windows.Forms.TextBox();
             this.phoneBox = new System.Windows.Forms.TextBox();
-            this.birthdayBox = new System.Windows.Forms.DateTimePicker();
+            this.showpasswordBox = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,6 +139,7 @@ namespace ClothesShop
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.showpasswordBox);
             this.panel2.Controls.Add(this.birthdayBox);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.emailBox);
@@ -158,6 +160,14 @@ namespace ClothesShop
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(776, 426);
             this.panel2.TabIndex = 3;
+            // 
+            // birthdayBox
+            // 
+            this.birthdayBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.birthdayBox.Location = new System.Drawing.Point(406, 297);
+            this.birthdayBox.Name = "birthdayBox";
+            this.birthdayBox.Size = new System.Drawing.Size(295, 30);
+            this.birthdayBox.TabIndex = 18;
             // 
             // label8
             // 
@@ -227,13 +237,18 @@ namespace ClothesShop
             this.phoneBox.Size = new System.Drawing.Size(296, 32);
             this.phoneBox.TabIndex = 10;
             // 
-            // birthdayBox
+            // showpasswordBox
             // 
-            this.birthdayBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birthdayBox.Location = new System.Drawing.Point(406, 297);
-            this.birthdayBox.Name = "birthdayBox";
-            this.birthdayBox.Size = new System.Drawing.Size(295, 30);
-            this.birthdayBox.TabIndex = 18;
+            this.showpasswordBox.AutoSize = true;
+            this.showpasswordBox.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showpasswordBox.ForeColor = System.Drawing.Color.Gray;
+            this.showpasswordBox.Location = new System.Drawing.Point(80, 367);
+            this.showpasswordBox.Name = "showpasswordBox";
+            this.showpasswordBox.Size = new System.Drawing.Size(154, 25);
+            this.showpasswordBox.TabIndex = 19;
+            this.showpasswordBox.Text = "Show Password";
+            this.showpasswordBox.UseVisualStyleBackColor = true;
+            this.showpasswordBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Usersignup
             // 
@@ -272,5 +287,6 @@ namespace ClothesShop
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker birthdayBox;
+        private System.Windows.Forms.CheckBox showpasswordBox;
     }
 }

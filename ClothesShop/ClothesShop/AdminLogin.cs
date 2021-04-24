@@ -48,5 +48,10 @@ namespace ClothesShop
         {
             Application.Exit();
         }
+
+        private void showpasswordBox_CheckedChanged(object sender, EventArgs e)
+        {
+            adminpasssword.PasswordChar = showpasswordBox.Checked ? '\0' : '●';
+        }
     }
 }

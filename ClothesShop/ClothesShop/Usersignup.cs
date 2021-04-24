@@ -112,11 +112,14 @@ namespace ClothesShop
         public Usersignup()
         {
             InitializeComponent();
+            passwordBox.PasswordChar = '●';
+
         }
 
         private void closebtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+
         }
 
         //click button login
@@ -144,6 +147,13 @@ namespace ClothesShop
             	log.Show();
            		this.Hide();
         	}
+        }
+
+
+        //show password check box
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            passwordBox.PasswordChar = showpasswordBox.Checked ? '\0' : '●';
         }
     }
 }

@@ -45,6 +45,7 @@ namespace ClothesShop
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.showpasswordBox = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -111,6 +112,7 @@ namespace ClothesShop
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.showpasswordBox);
             this.panel2.Controls.Add(this.closebtn);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.button1);
@@ -222,6 +224,19 @@ namespace ClothesShop
             this.label1.TabIndex = 1;
             this.label1.Text = "Clothes Shop";
             // 
+            // showpasswordBox
+            // 
+            this.showpasswordBox.AutoSize = true;
+            this.showpasswordBox.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showpasswordBox.ForeColor = System.Drawing.Color.Gray;
+            this.showpasswordBox.Location = new System.Drawing.Point(12, 388);
+            this.showpasswordBox.Name = "showpasswordBox";
+            this.showpasswordBox.Size = new System.Drawing.Size(154, 25);
+            this.showpasswordBox.TabIndex = 20;
+            this.showpasswordBox.Text = "Show Password";
+            this.showpasswordBox.UseVisualStyleBackColor = true;
+            this.showpasswordBox.CheckedChanged += new System.EventHandler(this.showpasswordBox_CheckedChanged);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -261,5 +276,6 @@ namespace ClothesShop
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckBox showpasswordBox;
     }
 }
