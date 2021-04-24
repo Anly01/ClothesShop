@@ -120,6 +120,7 @@ namespace ClothesShop
             this.label4.Size = new System.Drawing.Size(68, 23);
             this.label4.TabIndex = 8;
             this.label4.Text = "Log In";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // closebtn
             // 
@@ -242,6 +243,7 @@ namespace ClothesShop
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Usersignup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usersignup";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

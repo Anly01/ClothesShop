@@ -71,7 +71,6 @@ D:\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.exe
 D:\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.pdb
 D:\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.testDB.resources
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.Usersignup.resources
-C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.peopleform.resources
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\Dapper.dll
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\EntityFramework.dll
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\EntityFramework.SqlServer.dll
@@ -82,7 +81,6 @@ C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\Dapper.xml
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\EntityFramework.xml
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\System.Data.SQLite.xml
-C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\bin\Debug\ClothesShopDB.db
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.peopleform.resources
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.Usersignup.resources
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\bin\Debug\ClothesShopDB.db
@@ -97,7 +95,6 @@ C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\bin\Debug\EntityFramewor
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\bin\Debug\System.Data.SQLite.xml
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.TestDB2.resources
-C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.TestDB2.resources
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.Dashboard.resources
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.AdminLogin.resources
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.AdminLogin.resources

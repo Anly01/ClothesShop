@@ -68,7 +68,7 @@ namespace ClothesShop
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(28, 280);
+            this.label7.Location = new System.Drawing.Point(27, 280);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(145, 26);
             this.label7.TabIndex = 12;
@@ -101,7 +101,7 @@ namespace ClothesShop
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(16, 122);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 122);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(171, 145);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -142,11 +142,12 @@ namespace ClothesShop
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(249, 375);
+            this.label4.Location = new System.Drawing.Point(247, 375);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 23);
             this.label4.TabIndex = 8;
             this.label4.Text = "Sign Up";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button1
             // 

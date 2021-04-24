@@ -21,5 +21,13 @@ namespace ClothesShop
         {
             Application.Exit();
         }
+
+        //click button login
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+            this.Hide();
+        }
     }
 }

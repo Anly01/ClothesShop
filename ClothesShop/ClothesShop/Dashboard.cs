@@ -27,6 +27,7 @@ namespace ClothesShop
 
         }
 
+        //click button exit
         private void label11_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -43,6 +44,14 @@ namespace ClothesShop
         private void label7_Click(object sender, EventArgs e)
         {
             Users log = new Users();
+            log.Show();
+            this.Hide();
+        }
+
+        //click button logout
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
             log.Show();
             this.Hide();
         }

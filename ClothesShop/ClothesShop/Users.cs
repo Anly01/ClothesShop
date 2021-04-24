@@ -56,5 +56,13 @@ namespace ClothesShop
 			log.Show();
 			this.Hide();
 		}
+
+		//click button logout
+        private void label9_Click(object sender, EventArgs e)
+        {
+			Login log = new Login();
+			log.Show();
+			this.Hide();
+		}
     }
 }

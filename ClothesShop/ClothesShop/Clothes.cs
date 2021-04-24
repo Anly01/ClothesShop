@@ -32,11 +32,13 @@ namespace ClothesShop
 
         }
 
+        //click button exit
         private void label11_Click(object sender, System.EventArgs e)
         {
             Application.Exit();
         }
 
+        //click menubar user
         private void label7_Click(object sender, System.EventArgs e)
         {
             Users log = new Users();
@@ -44,9 +46,18 @@ namespace ClothesShop
             this.Hide();
         }
 
+        //click menubar dashboard
         private void label8_Click(object sender, System.EventArgs e)
         {
             Dashboard log = new Dashboard();
+            log.Show();
+            this.Hide();
+        }
+
+        //click button logout
+        private void label9_Click(object sender, System.EventArgs e)
+        {
+            Login log = new Login();
             log.Show();
             this.Hide();
         }
