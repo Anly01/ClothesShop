@@ -20,7 +20,7 @@ namespace ClothesShop
         int startpos = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            startpos += 1;
+            startpos += 4;
             Myprogress.Value = startpos;
             PercentageLbl.Text = startpos+"%";
             if (Myprogress.Value == 100)

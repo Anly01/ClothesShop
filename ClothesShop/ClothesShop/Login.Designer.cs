@@ -73,6 +73,7 @@ namespace ClothesShop
             this.label7.Size = new System.Drawing.Size(145, 26);
             this.label7.TabIndex = 12;
             this.label7.Text = "Admin Login";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 

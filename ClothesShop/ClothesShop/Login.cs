@@ -26,5 +26,13 @@ namespace ClothesShop
         {
             Application.Exit();
         }
+
+        //click on admin login
+        private void label7_Click(object sender, EventArgs e)
+        {
+            AdminLogin log = new AdminLogin();
+            log.Show();
+            this.Hide();
+        }
     }
 }
