@@ -49,7 +49,27 @@ namespace ClothesShop
 		    
 		    return usernameList;
 		}
-		
+
+		public static ArrayList getPassword()
+		{
+			ArrayList passwordList = new ArrayList();
+			string password = "";
+
+			SQLiteConnection conn;
+			conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
+			conn.Open();
+			SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM Users", conn);
+			SQLiteDataReader reader = cmd.ExecuteReader();
+			while (reader.Read())
+			{
+				password = reader.GetString(4);
+				passwordList.Add(password);
+			}
+			conn.Close();
+
+			return passwordList;
+		}
+
 		public static void signUpDataToDb(string username, string fullName, 
 		                                  string address, string phone, 
 		                                  string password, string gender,

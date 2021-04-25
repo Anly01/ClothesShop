@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,8 @@ namespace ClothesShop
         public Login()
         {
             InitializeComponent();
-            userpassword.PasswordChar = '●';
+            passwordBox.PasswordChar = '●';
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -45,7 +47,60 @@ namespace ClothesShop
 
         private void showpasswordBox_CheckedChanged(object sender, EventArgs e)
         {
-            userpassword.PasswordChar = showpasswordBox.Checked ? '\0' : '●';
+            passwordBox.PasswordChar = showpasswordBox.Checked ? '\0' : '●';
+        }
+
+        static bool checkUsername(string username)
+        {
+            ArrayList usernameList = SQLAccess.getUsername();
+            if (username == "")
+            {
+                MessageBox.Show("Fill your username");
+                return false;
+            }
+            else if (usernameList.Contains(username))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        static bool checkPassword(string userPass)
+        {
+            ArrayList passwordList = SQLAccess.getPassword();
+            if (userPass == "")
+            {
+                MessageBox.Show("Fill your username");
+                return false;
+            }
+            else if (passwordList.Contains(userPass))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void Loginbtn_Click(object sender, EventArgs e)
+        {
+            string username = usernameBox.Text.Trim();
+            string password = passwordBox.Text.Trim();
+            ArrayList usernameList = SQLAccess.getUsername();
+
+            if (checkUsername(username) && checkPassword(password)) 
+            {
+                Dashboard log = new Dashboard();
+                log.Show();
+                this.Hide();
+            }else
+            {
+                MessageBox.Show("Wrong Username / Password");
+            }
         }
     }
 }

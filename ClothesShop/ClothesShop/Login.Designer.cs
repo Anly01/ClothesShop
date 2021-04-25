@@ -36,16 +36,16 @@ namespace ClothesShop
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.showpasswordBox = new System.Windows.Forms.CheckBox();
             this.closebtn = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Loginbtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.userpassword = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.passwordBox = new System.Windows.Forms.TextBox();
+            this.usernameBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.showpasswordBox = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -115,17 +115,30 @@ namespace ClothesShop
             this.panel2.Controls.Add(this.showpasswordBox);
             this.panel2.Controls.Add(this.closebtn);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.Loginbtn);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.userpassword);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.passwordBox);
+            this.panel2.Controls.Add(this.usernameBox);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(218, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(570, 426);
             this.panel2.TabIndex = 1;
+            // 
+            // showpasswordBox
+            // 
+            this.showpasswordBox.AutoSize = true;
+            this.showpasswordBox.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showpasswordBox.ForeColor = System.Drawing.Color.Gray;
+            this.showpasswordBox.Location = new System.Drawing.Point(12, 388);
+            this.showpasswordBox.Name = "showpasswordBox";
+            this.showpasswordBox.Size = new System.Drawing.Size(154, 25);
+            this.showpasswordBox.TabIndex = 20;
+            this.showpasswordBox.Text = "Show Password";
+            this.showpasswordBox.UseVisualStyleBackColor = true;
+            this.showpasswordBox.CheckedChanged += new System.EventHandler(this.showpasswordBox_CheckedChanged);
             // 
             // closebtn
             // 
@@ -151,17 +164,18 @@ namespace ClothesShop
             this.label4.Text = "Sign Up";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // button1
+            // Loginbtn
             // 
-            this.button1.BackColor = System.Drawing.Color.DimGray;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(224, 329);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 37);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Loginbtn.BackColor = System.Drawing.Color.DimGray;
+            this.Loginbtn.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Loginbtn.ForeColor = System.Drawing.Color.White;
+            this.Loginbtn.Location = new System.Drawing.Point(224, 329);
+            this.Loginbtn.Name = "Loginbtn";
+            this.Loginbtn.Size = new System.Drawing.Size(125, 37);
+            this.Loginbtn.TabIndex = 7;
+            this.Loginbtn.Text = "Login";
+            this.Loginbtn.UseVisualStyleBackColor = false;
+            this.Loginbtn.Click += new System.EventHandler(this.Loginbtn_Click);
             // 
             // label3
             // 
@@ -185,22 +199,22 @@ namespace ClothesShop
             this.label2.TabIndex = 5;
             this.label2.Text = "Username";
             // 
-            // userpassword
+            // passwordBox
             // 
-            this.userpassword.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.userpassword.Location = new System.Drawing.Point(140, 272);
-            this.userpassword.Name = "userpassword";
-            this.userpassword.Size = new System.Drawing.Size(295, 42);
-            this.userpassword.TabIndex = 4;
-            this.userpassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.passwordBox.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.passwordBox.Location = new System.Drawing.Point(140, 272);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(295, 42);
+            this.passwordBox.TabIndex = 4;
+            this.passwordBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // usernameBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.textBox1.Location = new System.Drawing.Point(140, 185);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(296, 42);
-            this.textBox1.TabIndex = 3;
+            this.usernameBox.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.usernameBox.Location = new System.Drawing.Point(140, 185);
+            this.usernameBox.Name = "usernameBox";
+            this.usernameBox.Size = new System.Drawing.Size(296, 42);
+            this.usernameBox.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -223,19 +237,6 @@ namespace ClothesShop
             this.label1.Size = new System.Drawing.Size(194, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "Clothes Shop";
-            // 
-            // showpasswordBox
-            // 
-            this.showpasswordBox.AutoSize = true;
-            this.showpasswordBox.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showpasswordBox.ForeColor = System.Drawing.Color.Gray;
-            this.showpasswordBox.Location = new System.Drawing.Point(12, 388);
-            this.showpasswordBox.Name = "showpasswordBox";
-            this.showpasswordBox.Size = new System.Drawing.Size(154, 25);
-            this.showpasswordBox.TabIndex = 20;
-            this.showpasswordBox.Text = "Show Password";
-            this.showpasswordBox.UseVisualStyleBackColor = true;
-            this.showpasswordBox.CheckedChanged += new System.EventHandler(this.showpasswordBox_CheckedChanged);
             // 
             // Login
             // 
@@ -267,10 +268,10 @@ namespace ClothesShop
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox userpassword;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox passwordBox;
+        private System.Windows.Forms.TextBox usernameBox;
         private System.Windows.Forms.Label closebtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Loginbtn;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
