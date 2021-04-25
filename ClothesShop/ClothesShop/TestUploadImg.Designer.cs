@@ -36,12 +36,43 @@ namespace ClothesShop
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.button1 = new System.Windows.Forms.Button();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Location = new System.Drawing.Point(79, 12);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(128, 114);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(52, 152);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(182, 35);
+			this.button1.TabIndex = 1;
+			this.button1.Text = "Upload image";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
 			// 
 			// TestUploadImg
 			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Text = "TestUploadImg";
+			this.ClientSize = new System.Drawing.Size(284, 262);
+			this.Controls.Add(this.button1);
+			this.Controls.Add(this.pictureBox1);
 			this.Name = "TestUploadImg";
+			this.Text = "TestUploadImg";
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.PictureBox pictureBox1;
 	}
 }
