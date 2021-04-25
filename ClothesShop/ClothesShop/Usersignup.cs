@@ -108,6 +108,31 @@ namespace ClothesShop
     		}
     	}
     	
+    	static bool checkFullName(string fullName)
+    	{
+    		if (fullName == "")
+    		{
+    			MessageBox.Show("Fill out the full name");
+    			return false;
+    		}
+    		else
+    		{
+    			return true;
+    		}
+    	}
+    	
+    	static bool checkGender(bool cond1, bool cond2)
+    	{
+    		if (!cond1 && !cond2)
+    		{
+    			MessageBox.Show("Fill out the gender");
+    			return false;
+    		}
+    		else
+    		{
+    			return true;
+    		}
+    	}
     	
         public Usersignup()
         {
@@ -137,12 +162,18 @@ namespace ClothesShop
         	string email = emailBox.Text.Trim();
         	string phone = phoneBox.Text.Trim();
         	string address = addressBox.Text.Trim();
+        	string fullName = fullNameBox.Text.Trim();
+        	string gender = maleButton.Checked ? maleButton.Text : femaleButton.Text;
+        	string birthday = birthdayBox.Value.ToShortDateString();
 
         	
         	if (checkUsername(currUsername) && checkPassword(password) &&
         	    checkEmail(email) && checkPhone(phone) && 
-        	    checkAddress(address))
+        	    checkAddress(address) && checkFullName(fullName) &&
+        	    checkGender(maleButton.Checked, femaleButton.Checked))
         	{
+        		SQLAccess.signUpDataToDb(currUsername, fullName, address, phone, password, gender, email, birthday);
+        		MessageBox.Show("Sign Up Success");
         		Login log = new Login();
             	log.Show();
            		this.Hide();

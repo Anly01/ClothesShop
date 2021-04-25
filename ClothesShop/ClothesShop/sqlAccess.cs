@@ -25,7 +25,7 @@ namespace ClothesShop
 		    {
 		    	password = reader.GetString(2);
 		    }
-		    
+		    conn.Close();
 		    return password;
 		}
 		
@@ -45,8 +45,27 @@ namespace ClothesShop
 		    	username = reader.GetString(0);
 		    	usernameList.Add(username);
 		    }
+		    conn.Close();
 		    
 		    return usernameList;
+		}
+		
+		public static void signUpDataToDb(string username, string fullName, 
+		                                  string address, string phone, 
+		                                  string password, string gender,
+		                                  string email, string birthday)
+		{
+			string query = string.Format("INSERT INTO Users(username, full_name, address, phone, passwd" +
+			                            ", gender, email, birthday) VALUES('{0}','{1}', '{2}', '{3}'" +
+			                            ", '{4}', '{5}', '{6}', '{7}')", username, fullName, address, phone, password, 
+			                            gender, email, birthday);
+			
+			SQLiteConnection conn;
+			conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
+		    conn.Open();
+		    SQLiteCommand cmd = new SQLiteCommand(query, conn);
+		    cmd.ExecuteNonQuery();
+		    conn.Close();
 		}
 	}
 }

@@ -1,6 +1,8 @@
 CREATE TABLE Users (
 	username TEXT NOT NULL,
 	full_name TEXT NOT NULL,
+	address TEXT NOT NULL,
+	phone TEXT NOT NULL,
 	passwd TEXT NOT NULL,
 	gender TEXT NOT NULL,
 	email TEXT NOT NULL,
