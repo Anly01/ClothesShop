@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -50,56 +51,37 @@ namespace ClothesShop
             passwordBox.PasswordChar = showpasswordBox.Checked ? '\0' : '●';
         }
 
-        static bool checkUsername(string username)
-        {
-            ArrayList usernameList = SQLAccess.getUsername();
-            if (username == "")
-            {
-                MessageBox.Show("Fill your username");
-                return false;
-            }
-            else if (usernameList.Contains(username))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        static bool checkPassword(string userPass)
-        {
-            ArrayList passwordList = SQLAccess.getPassword();
-            if (userPass == "")
-            {
-                MessageBox.Show("Fill your username");
-                return false;
-            }
-            else if (passwordList.Contains(userPass))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
 
         private void Loginbtn_Click(object sender, EventArgs e)
         {
             string username = usernameBox.Text.Trim();
             string password = passwordBox.Text.Trim();
             ArrayList usernameList = SQLAccess.getUsername();
+            if (username=="" && password == "")
+            {
+                MessageBox.Show("blom isi ntol");
+            } else
+            {
+                string query = "SELECT * FROM Users WHERE username= @user AND passwd= @password";
+                SQLiteConnection conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query,conn);
+                cmd.Parameters.AddWithValue("@user",usernameBox.Text);
+                cmd.Parameters.AddWithValue("@password", passwordBox.Text);
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
 
-            if (checkUsername(username) && checkPassword(password)) 
-            {
-                Dashboard log = new Dashboard();
-                log.Show();
-                this.Hide();
-            }else
-            {
-                MessageBox.Show("Wrong Username / Password");
+                if (dt.Rows.Count > 0)
+                {
+                    MessageBox.Show("MASOK PAK EKO");
+                }
+                else
+                {
+                    MessageBox.Show("IMPOSTOR KAU");
+                }
+
+
             }
         }
     }
