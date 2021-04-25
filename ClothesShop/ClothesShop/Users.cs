@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,10 +31,24 @@ namespace ClothesShop
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-			
+			populate();
+
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
+		}
+
+		SQLiteConnection conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
+		private void populate()
+        {
+			conn.Open();
+			string query = "select * from Users";
+			SQLiteCommand cmd = new SQLiteCommand(query, conn);
+			SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+			DataTable dt = new DataTable();
+			adapter.Fill(dt);
+			userDGV.DataSource = dt;
+			conn.Close();
 		}
 
 		//click clothes menubar
