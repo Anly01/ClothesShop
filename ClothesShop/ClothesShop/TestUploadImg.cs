@@ -9,6 +9,7 @@
 using System;
 using System.Drawing;
 using System.IO;
+using System.Data.SQLite;
 using System.Windows.Forms;
 
 namespace ClothesShop
@@ -38,10 +39,47 @@ namespace ClothesShop
 			if (open.ShowDialog() == DialogResult.OK) 
 			{
 			    // display image in picture box
-				Bitmap img = new Bitmap(open.FileName);		    
+				Image img = new Bitmap(open.FileName);    
 			    pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
 			    pictureBox1.Image = img; 
 			}  
+		}
+		
+		void Button2Click(object sender, EventArgs e)
+		{
+			Image img = pictureBox1.Image;
+			byte[] test = imgHelper.ImageToByte(img);
+			
+			SQLiteConnection conn;
+		    conn = new SQLiteConnection("Data Source=TestImg.db;Version=3;");
+		    conn.Open();
+		    SQLiteCommand cmd = conn.CreateCommand();
+		    cmd.CommandText = "INSERT INTO image(img) VALUES(@0)";
+		    SQLiteParameter parameter = new SQLiteParameter("@0", System.Data.DbType.Binary);
+			parameter.Value = test;
+			cmd.Parameters.Add(parameter);
+		    cmd.ExecuteNonQuery();
+		    conn.Close();
+		}
+		
+		
+		
+		void Button3Click(object sender, EventArgs e)
+		{
+			string raw = "";
+			SQLiteConnection conn;
+			conn = new SQLiteConnection("Data Source=TestImg.db;Version=3;");
+		    conn.Open();
+		    SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM image", conn);
+		    SQLiteDataReader reader = cmd.ExecuteReader();
+		    while (reader.Read())
+		    {
+		    	byte[] buffer = imgHelper.GetBytes(reader);
+		    	pictureBox1.Image = imgHelper.ByteToImage(buffer);
+		    }
+		    conn.Close();
+			
+		    
 		}
 	}
 }

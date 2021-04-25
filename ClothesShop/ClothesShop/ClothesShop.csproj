@@ -108,6 +108,7 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="imgHelper.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +188,7 @@
     <None Include="bin\Debug\birthdays.db" />
     <None Include="bin\Debug\ClothesShop.exe.config" />
     <None Include="bin\Debug\ClothShop.db" />
+    <None Include="bin\Debug\TestImg.db" />
     <None Include="obj\Debug\ClothesShop.csproj.CopyComplete" />
     <None Include="obj\Debug\ClothesShop.csproj.CoreCompileInputs.cache" />
     <None Include="obj\Debug\ClothesShop.csproj.GenerateResource.cache" />
