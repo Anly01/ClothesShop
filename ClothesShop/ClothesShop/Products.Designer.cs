@@ -30,9 +30,8 @@ namespace ClothesShop
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Products));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -65,7 +64,7 @@ namespace ClothesShop
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.userDGV = new System.Windows.Forms.DataGridView();
+            this.s = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
@@ -78,7 +77,7 @@ namespace ClothesShop
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.s)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -286,6 +285,7 @@ namespace ClothesShop
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.s);
             this.panel2.Controls.Add(this.usernamelbl);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.button2);
@@ -300,7 +300,6 @@ namespace ClothesShop
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.userDGV);
             this.panel2.Controls.Add(this.closebtn);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(324, 12);
@@ -335,7 +334,7 @@ namespace ClothesShop
             this.button2.BackColor = System.Drawing.Color.Gray;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(550, 237);
+            this.button2.Location = new System.Drawing.Point(550, 238);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(182, 58);
             this.button2.TabIndex = 40;
@@ -403,7 +402,7 @@ namespace ClothesShop
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(754, 237);
+            this.button1.Location = new System.Drawing.Point(754, 238);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(182, 57);
             this.button1.TabIndex = 34;
@@ -452,47 +451,36 @@ namespace ClothesShop
             this.textBox1.Size = new System.Drawing.Size(293, 42);
             this.textBox1.TabIndex = 30;
             // 
-            // userDGV
+            // s
             // 
-            this.userDGV.AllowUserToAddRows = false;
-            this.userDGV.AllowUserToDeleteRows = false;
-            this.userDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.userDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.userDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.userDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.userDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.userDGV.DefaultCellStyle = dataGridViewCellStyle2;
-            this.userDGV.Location = new System.Drawing.Point(36, 323);
-            this.userDGV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.userDGV.Name = "userDGV";
-            this.userDGV.ReadOnly = true;
-            this.userDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gray;
+            this.s.AllowUserToAddRows = false;
+            this.s.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.userDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.userDGV.RowHeadersVisible = false;
-            this.userDGV.RowHeadersWidth = 62;
-            this.userDGV.Size = new System.Drawing.Size(901, 370);
-            this.userDGV.TabIndex = 20;
+            this.s.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.s.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.s.DefaultCellStyle = dataGridViewCellStyle4;
+            this.s.Location = new System.Drawing.Point(36, 315);
+            this.s.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.s.Name = "s";
+            this.s.ReadOnly = true;
+            this.s.RowHeadersVisible = false;
+            this.s.RowHeadersWidth = 62;
+            this.s.RowTemplate.Height = 100;
+            this.s.Size = new System.Drawing.Size(900, 384);
+            this.s.TabIndex = 43;
             // 
             // Products
             // 
@@ -525,7 +513,7 @@ namespace ClothesShop
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.s)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -561,9 +549,9 @@ namespace ClothesShop
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView userDGV;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label usernamelbl;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView s;
     }
 }
