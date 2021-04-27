@@ -66,7 +66,6 @@ namespace ClothesShop
 		
 		void Button3Click(object sender, EventArgs e)
 		{
-			string raw = "";
 			SQLiteConnection conn;
 			conn = new SQLiteConnection("Data Source=TestImg.db;Version=3;");
 		    conn.Open();
@@ -80,6 +79,14 @@ namespace ClothesShop
 		    conn.Close();
 			
 		    
+		}
+		
+		void Button4Click(object sender, EventArgs e)
+		{
+			if (pictureBox1.Image == null)
+			{
+				label1.Text = "testos";
+			}
 		}
 	}
 }
