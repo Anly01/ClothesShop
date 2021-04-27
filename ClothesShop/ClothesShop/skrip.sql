@@ -25,13 +25,13 @@ CREATE TABLE Cart (
 );
 
 CREATE TABLE Cloth (
+	image BLOB,
 	productID INTEGER NOT NULL,
 	name TEXT NOT NULL,
 	price INTEGER NOT NULL,
 	size TEXT NOT NULL,
 	quantity INTEGER NOT NULL,
 	adminID INTEGER NOT NULL,
-	image BLOB,
 	PRIMARY KEY (productID),
 	FOREIGN KEY (adminID) REFERENCES Admin (adminID)
 );

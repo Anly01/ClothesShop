@@ -49,7 +49,7 @@ namespace ClothesShop
 			this.qtyBox = new System.Windows.Forms.TextBox();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.label12 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
+			this.resetBtn = new System.Windows.Forms.Button();
 			this.saveBtn = new System.Windows.Forms.Button();
 			this.uploadBtn = new System.Windows.Forms.Button();
 			this.clothImg = new System.Windows.Forms.PictureBox();
@@ -104,7 +104,7 @@ namespace ClothesShop
 			this.panel2.Controls.Add(this.qtyBox);
 			this.panel2.Controls.Add(this.dataGridView1);
 			this.panel2.Controls.Add(this.label12);
-			this.panel2.Controls.Add(this.button1);
+			this.panel2.Controls.Add(this.resetBtn);
 			this.panel2.Controls.Add(this.saveBtn);
 			this.panel2.Controls.Add(this.uploadBtn);
 			this.panel2.Controls.Add(this.clothImg);
@@ -255,18 +255,19 @@ namespace ClothesShop
 			this.label12.TabIndex = 19;
 			this.label12.Text = "Clothes List";
 			// 
-			// button1
+			// resetBtn
 			// 
-			this.button1.BackColor = System.Drawing.Color.DimGray;
-			this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.ForeColor = System.Drawing.Color.White;
-			this.button1.Location = new System.Drawing.Point(506, 154);
-			this.button1.Margin = new System.Windows.Forms.Padding(2);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(121, 30);
-			this.button1.TabIndex = 18;
-			this.button1.Text = "Reset";
-			this.button1.UseVisualStyleBackColor = false;
+			this.resetBtn.BackColor = System.Drawing.Color.DimGray;
+			this.resetBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.resetBtn.ForeColor = System.Drawing.Color.White;
+			this.resetBtn.Location = new System.Drawing.Point(506, 154);
+			this.resetBtn.Margin = new System.Windows.Forms.Padding(2);
+			this.resetBtn.Name = "resetBtn";
+			this.resetBtn.Size = new System.Drawing.Size(121, 30);
+			this.resetBtn.TabIndex = 18;
+			this.resetBtn.Text = "Reset";
+			this.resetBtn.UseVisualStyleBackColor = false;
+			this.resetBtn.Click += new System.EventHandler(this.ResetBtnClick);
 			// 
 			// saveBtn
 			// 
@@ -611,7 +612,7 @@ namespace ClothesShop
 		private System.Windows.Forms.PictureBox clothImg;
 		private System.Windows.Forms.Button uploadBtn;
 		private System.Windows.Forms.Button saveBtn;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button resetBtn;
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.TextBox qtyBox;

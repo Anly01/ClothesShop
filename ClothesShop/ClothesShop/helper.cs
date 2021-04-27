@@ -16,7 +16,7 @@ namespace ClothesShop
 	public class helper
 	{
 		public static bool isDigit(string x)
-    	{
+    	{	
     		foreach (char y in x)
     		{
     			if (y < '0' || y > '9')

@@ -21,21 +21,63 @@ namespace ClothesShop
     {
         public Clothes()
         {
-            //
-            // The InitializeComponent() call is required for Windows Forms designer support.
-            //
             InitializeComponent();
-
-            //
-            // TODO: Add constructor code after the InitializeComponent() call.
-            //
         }
 
         private void pictureBox1_Click(object sender, System.EventArgs e)
         {
 
         }
-
+		
+        static bool checkSize(string size)
+        {
+        	if (size == "Size")
+        	{
+        		MessageBox.Show("Please choose the size");
+        		return false; 
+        	}
+        	
+        	return true;
+        }
+        
+        static bool checkImg(Image img)
+        {
+        	if (img == null)
+        	{
+        		MessageBox.Show("Please upload the image");
+        		return false; 
+        	}
+        	
+        	return true;
+        }
+        
+        static bool checkNumber(string num)
+        {
+        	if (num == "")
+        	{
+        		MessageBox.Show("Fill out the quantity and price");
+        		return false;
+        	}
+        	else if (!helper.isDigit(num))
+        	{
+        		MessageBox.Show("Please input the number at quantity and price");
+        		return false;
+        	}
+        	
+        	return true;
+        }
+        
+        static bool checkClothName(string clothName)
+    	{
+    		if (clothName == "")
+    		{
+    			MessageBox.Show("Fill out the cloth name");
+    			return false;
+    		}
+    		
+    		return true;
+    	}
+        
         //click button exit
         private void label11_Click(object sender, System.EventArgs e)
         {
@@ -73,6 +115,12 @@ namespace ClothesShop
 			string size = sizeBox.Text.Trim();
 			string qty = qtyBox.Text.Trim();
 			string price = priceBox.Text.Trim();
+			
+			if (checkImg(img) && checkClothName(clothName) && checkSize(size) &&
+			    checkNumber(qty) && checkNumber(price))
+			{
+				MessageBox.Show("Nice");
+			}
 		}
 		
 		void UploadBtnClick(object sender, EventArgs e)
@@ -87,6 +135,15 @@ namespace ClothesShop
 			    clothImg.SizeMode = PictureBoxSizeMode.Zoom;
 			    clothImg.Image = img;
 			}		
+		}
+		
+		void ResetBtnClick(object sender, EventArgs e)
+		{
+			clothImg.Image = null;
+			clothNameBox.Text = "";
+			qtyBox.Text = "";
+			sizeBox.Text = "Size";
+			priceBox.Text = "";
 		}
     }
 }
