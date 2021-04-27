@@ -7,6 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Data.SQLite;
@@ -22,11 +23,42 @@ namespace ClothesShop
         public Clothes()
         {
             InitializeComponent();
+            populate();
         }
 
         private void pictureBox1_Click(object sender, System.EventArgs e)
         {
 
+        }
+        
+        private void populate()
+        {
+        	SQLiteConnection conn;
+		    conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
+		    conn.Open();
+		    SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM Cloth", conn);
+        	SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+		    DataTable dt = new DataTable();
+		    adapter.Fill(dt);
+		    dgvCloth.DataSource = dt;
+		    
+		    DataGridViewImageColumn imageCol = new DataGridViewImageColumn();
+		    imageCol.HeaderText = "Image";
+		    imageCol = (DataGridViewImageColumn)dgvCloth.Columns[0];
+		    imageCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
+		    
+		    /*SQLiteCommand cmd2 = new SQLiteCommand("SELECT image FROM Cloth", conn);
+		    // cmd.CommandText = "SELECT image FROM Cloth";
+		    SQLiteDataReader reader = cmd2.ExecuteReader();
+		    while (reader.Read())
+		    {
+		    	byte[] buffer = imgHelper.GetBytes(reader);
+		    	Image img = imgHelper.ByteToImage(buffer);
+		    	dgvCloth.Rows[0].Cells[0].Value = new Bitmap(img);
+		    	counter++;
+		    }*/
+		    
+		    conn.Close();
         }
 		
         static bool checkSize(string size)
@@ -121,6 +153,7 @@ namespace ClothesShop
 			{
 				MessageBox.Show("Nice");
 				SQLAccess.saveClothToDb(img, clothName, price, size, qty);
+				populate();
 			}
 		}
 		

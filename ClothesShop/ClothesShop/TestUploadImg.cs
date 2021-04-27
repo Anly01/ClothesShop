@@ -68,9 +68,9 @@ namespace ClothesShop
 		void Button3Click(object sender, EventArgs e)
 		{
 			SQLiteConnection conn;
-			conn = new SQLiteConnection("Data Source=TestImg.db;Version=3;");
+			conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
 		    conn.Open();
-		    SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM image", conn);
+		    SQLiteCommand cmd = new SQLiteCommand("SELECT image FROM Cloth", conn);
 		    SQLiteDataReader reader = cmd.ExecuteReader();
 		    while (reader.Read())
 		    {

@@ -47,7 +47,7 @@ namespace ClothesShop
 			this.priceBox = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.qtyBox = new System.Windows.Forms.TextBox();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.dgvCloth = new System.Windows.Forms.DataGridView();
 			this.label12 = new System.Windows.Forms.Label();
 			this.resetBtn = new System.Windows.Forms.Button();
 			this.saveBtn = new System.Windows.Forms.Button();
@@ -75,7 +75,7 @@ namespace ClothesShop
 			this.label4 = new System.Windows.Forms.Label();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.panel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvCloth)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.clothImg)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -102,7 +102,7 @@ namespace ClothesShop
 			this.panel2.Controls.Add(this.priceBox);
 			this.panel2.Controls.Add(this.label5);
 			this.panel2.Controls.Add(this.qtyBox);
-			this.panel2.Controls.Add(this.dataGridView1);
+			this.panel2.Controls.Add(this.dgvCloth);
 			this.panel2.Controls.Add(this.label12);
 			this.panel2.Controls.Add(this.resetBtn);
 			this.panel2.Controls.Add(this.saveBtn);
@@ -233,15 +233,17 @@ namespace ClothesShop
 			this.qtyBox.Size = new System.Drawing.Size(69, 30);
 			this.qtyBox.TabIndex = 21;
 			// 
-			// dataGridView1
+			// dgvCloth
 			// 
-			this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(9, 238);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.RowHeadersWidth = 62;
-			this.dataGridView1.Size = new System.Drawing.Size(620, 213);
-			this.dataGridView1.TabIndex = 20;
+			this.dgvCloth.AllowUserToAddRows = false;
+			this.dgvCloth.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.dgvCloth.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvCloth.Location = new System.Drawing.Point(9, 238);
+			this.dgvCloth.Name = "dgvCloth";
+			this.dgvCloth.RowHeadersWidth = 62;
+			this.dgvCloth.RowTemplate.Height = 100;
+			this.dgvCloth.Size = new System.Drawing.Size(620, 213);
+			this.dgvCloth.TabIndex = 20;
 			// 
 			// label12
 			// 
@@ -568,7 +570,7 @@ namespace ClothesShop
 			this.Text = "Dashboard";
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgvCloth)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.clothImg)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.panel1.ResumeLayout(false);
@@ -614,7 +616,7 @@ namespace ClothesShop
 		private System.Windows.Forms.Button saveBtn;
 		private System.Windows.Forms.Button resetBtn;
 		private System.Windows.Forms.Label label12;
-		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.DataGridView dgvCloth;
 		private System.Windows.Forms.TextBox qtyBox;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.TextBox priceBox;
