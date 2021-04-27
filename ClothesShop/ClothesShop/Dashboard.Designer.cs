@@ -52,14 +52,14 @@ namespace ClothesShop
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.amountLbl = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.ourUser = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.ClothesStock = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -318,7 +318,7 @@ namespace ClothesShop
             // 
             this.panel9.BackColor = System.Drawing.Color.DimGray;
             this.panel9.Controls.Add(this.pictureBox9);
-            this.panel9.Controls.Add(this.label12);
+            this.panel9.Controls.Add(this.amountLbl);
             this.panel9.Controls.Add(this.label13);
             this.panel9.Location = new System.Drawing.Point(102, 434);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -337,16 +337,16 @@ namespace ClothesShop
             this.pictureBox9.TabIndex = 29;
             this.pictureBox9.TabStop = false;
             // 
-            // label12
+            // amountLbl
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(99, 83);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(89, 34);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Stock";
+            this.amountLbl.AutoSize = true;
+            this.amountLbl.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.amountLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.amountLbl.Location = new System.Drawing.Point(99, 83);
+            this.amountLbl.Name = "amountLbl";
+            this.amountLbl.Size = new System.Drawing.Size(89, 34);
+            this.amountLbl.TabIndex = 27;
+            this.amountLbl.Text = "Stock";
             // 
             // label13
             // 
@@ -363,7 +363,7 @@ namespace ClothesShop
             // 
             this.panel8.BackColor = System.Drawing.Color.DimGray;
             this.panel8.Controls.Add(this.pictureBox8);
-            this.panel8.Controls.Add(this.label5);
+            this.panel8.Controls.Add(this.ourUser);
             this.panel8.Controls.Add(this.label10);
             this.panel8.Location = new System.Drawing.Point(534, 212);
             this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -382,16 +382,16 @@ namespace ClothesShop
             this.pictureBox8.TabIndex = 28;
             this.pictureBox8.TabStop = false;
             // 
-            // label5
+            // ourUser
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(100, 83);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 34);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Stock";
+            this.ourUser.AutoSize = true;
+            this.ourUser.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ourUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ourUser.Location = new System.Drawing.Point(100, 83);
+            this.ourUser.Name = "ourUser";
+            this.ourUser.Size = new System.Drawing.Size(89, 34);
+            this.ourUser.TabIndex = 27;
+            this.ourUser.Text = "Stock";
             // 
             // label10
             // 
@@ -407,7 +407,7 @@ namespace ClothesShop
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.DimGray;
-            this.panel7.Controls.Add(this.label3);
+            this.panel7.Controls.Add(this.ClothesStock);
             this.panel7.Controls.Add(this.label2);
             this.panel7.Controls.Add(this.pictureBox7);
             this.panel7.Location = new System.Drawing.Point(102, 212);
@@ -416,16 +416,16 @@ namespace ClothesShop
             this.panel7.Size = new System.Drawing.Size(336, 155);
             this.panel7.TabIndex = 26;
             // 
-            // label3
+            // ClothesStock
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(99, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 34);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Stock";
+            this.ClothesStock.AutoSize = true;
+            this.ClothesStock.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClothesStock.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClothesStock.Location = new System.Drawing.Point(99, 83);
+            this.ClothesStock.Name = "ClothesStock";
+            this.ClothesStock.Size = new System.Drawing.Size(89, 34);
+            this.ClothesStock.TabIndex = 27;
+            this.ClothesStock.Text = "Stock";
             // 
             // label2
             // 
@@ -460,6 +460,7 @@ namespace ClothesShop
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -514,14 +515,14 @@ namespace ClothesShop
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label amountLbl;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label ourUser;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label ClothesStock;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox9;

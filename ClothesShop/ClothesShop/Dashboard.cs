@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -54,6 +55,26 @@ namespace ClothesShop
             Login log = new Login();
             log.Show();
             this.Hide();
+        }
+
+        SQLiteConnection conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+;           conn.Open();
+            // untuk total stock
+            SQLiteCommand cmdStock = new SQLiteCommand("select sum(quantity) from Cloth", conn);
+            SQLiteDataAdapter adapterStock = new SQLiteDataAdapter(cmdStock);
+            DataTable clothesstock = new DataTable();
+            adapterStock.Fill(clothesstock) ;
+            ClothesStock.Text = clothesstock.Rows[0][0].ToString();
+
+            //untuk total user
+            SQLiteCommand cmdUser = new SQLiteCommand("select count(*) from Users", conn);
+            SQLiteDataAdapter adapterUser = new SQLiteDataAdapter(cmdUser);
+            DataTable usertotal = new DataTable();
+            adapterUser.Fill(usertotal);
+            ourUser.Text = usertotal.Rows[0][0].ToString();
+            conn.Close();
         }
     }
 }
