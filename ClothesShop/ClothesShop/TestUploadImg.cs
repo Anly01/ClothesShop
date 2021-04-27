@@ -7,6 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Data.SQLite;
@@ -66,11 +67,10 @@ namespace ClothesShop
 		
 		void Button3Click(object sender, EventArgs e)
 		{
-			string raw = "";
 			SQLiteConnection conn;
-			conn = new SQLiteConnection("Data Source=TestImg.db;Version=3;");
+			conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
 		    conn.Open();
-		    SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM image", conn);
+		    SQLiteCommand cmd = new SQLiteCommand("SELECT image FROM Cloth", conn);
 		    SQLiteDataReader reader = cmd.ExecuteReader();
 		    while (reader.Read())
 		    {
@@ -80,6 +80,14 @@ namespace ClothesShop
 		    conn.Close();
 			
 		    
+		}
+		
+		void Button4Click(object sender, EventArgs e)
+		{
+			if (pictureBox1.Image == null)
+			{
+				label1.Text = "testos";
+			}
 		}
 	}
 }

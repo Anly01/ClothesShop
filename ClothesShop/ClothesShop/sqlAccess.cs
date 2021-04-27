@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data;
 using System.Data.SQLite;
+using System.Drawing;
 
 namespace ClothesShop
 {
@@ -84,6 +86,30 @@ namespace ClothesShop
 			conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
 		    conn.Open();
 		    SQLiteCommand cmd = new SQLiteCommand(query, conn);
+		    cmd.ExecuteNonQuery();
+		    conn.Close();
+		}
+		
+		public static void saveClothToDb(Image img, string clothName, string price,
+		                                 string size, string qty)
+		{
+			int quantity = Convert.ToInt32(qty);
+			int price2 = Convert.ToInt32(price);
+			int adminID = 1;
+			string query = "INSERT INTO Cloth(image, name, price, size, quantity, adminID) VALUES(@img, @name, @price, @size, @qty, @adminID)";
+			
+			SQLiteConnection conn;
+			conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
+		    conn.Open();
+		    SQLiteCommand cmd = new SQLiteCommand(query, conn);
+		    SQLiteParameter parameter = new SQLiteParameter("@img", DbType.Binary);
+			parameter.Value = imgHelper.ImageToByte(img);
+			cmd.Parameters.Add(parameter);
+		    cmd.Parameters.AddWithValue("@name", clothName);
+		    cmd.Parameters.AddWithValue("@price", price2);
+		    cmd.Parameters.AddWithValue("@size", size);
+		    cmd.Parameters.AddWithValue("@qty", quantity);
+		    cmd.Parameters.AddWithValue("@adminID", adminID);
 		    cmd.ExecuteNonQuery();
 		    conn.Close();
 		}

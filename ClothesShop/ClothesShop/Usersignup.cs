@@ -13,20 +13,7 @@ using System.ComponentModel.DataAnnotations;
 namespace ClothesShop
 {
     public partial class Usersignup : Form
-    {
-    	static bool isDigit(string x)
-    	{
-    		foreach (char y in x)
-    		{
-    			if (y < '0' || y > '9')
-    			{
-    				return false;
-    			}
-    		}
-    		
-    		return true;
-    	}
-    	
+    {	
     	static bool checkUsername(string currUsername)
     	{
     		ArrayList usernameList = SQLAccess.getUsername();
@@ -84,7 +71,7 @@ namespace ClothesShop
     			MessageBox.Show("Fill out the phone number");
     			return false;
     		}
-    		else if (!(isDigit(phone)) || phone.Length < 7)
+    		else if (!(helper.isDigit(phone)) || phone.Length < 7)
     		{
     			MessageBox.Show("Invalid phone number");
     			return false;
