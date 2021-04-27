@@ -98,3 +98,4 @@ C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\bin\Debug\System.Numeric
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\bin\Debug\MySql.Data.xml
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.TestUploadImg.resources
 C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.TestUploadImg.resources
+C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.Products.resources
