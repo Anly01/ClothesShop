@@ -16,11 +16,9 @@ namespace ClothesShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new Products());
-=======
+
             Application.Run(new Clothes());
->>>>>>> e81a6244349cf309fcd604e08a9ccd558a9020e5
+
         }
     }
 }
