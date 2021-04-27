@@ -120,6 +120,7 @@ namespace ClothesShop
 			    checkNumber(qty) && checkNumber(price))
 			{
 				MessageBox.Show("Nice");
+				SQLAccess.saveClothToDb(img, clothName, price, size, qty);
 			}
 		}
 		
