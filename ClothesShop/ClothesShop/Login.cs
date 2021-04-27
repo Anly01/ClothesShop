@@ -51,10 +51,11 @@ namespace ClothesShop
             passwordBox.PasswordChar = showpasswordBox.Checked ? '\0' : '●';
         }
 
+        public static string username = "";
 
         private void Loginbtn_Click(object sender, EventArgs e)
         {
-            string username = usernameBox.Text.Trim();
+            username = usernameBox.Text.Trim();
             string password = passwordBox.Text.Trim();
             ArrayList usernameList = SQLAccess.getUsername();
             if (username=="" && password == "")
@@ -74,11 +75,13 @@ namespace ClothesShop
 
                 if (dt.Rows.Count > 0)
                 {
-                    MessageBox.Show("MASOK PAK EKO");
+                    Products log = new Products();
+                    log.Show();
+                    this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("IMPOSTOR KAU");
+                    MessageBox.Show("Wrong username or password");
                 }
 
 

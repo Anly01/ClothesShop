@@ -21,5 +21,10 @@ namespace ClothesShop
         {
             Application.Exit();
         }
+
+        private void Products_Load(object sender, EventArgs e)
+        {
+            usernamelbl.Text = Login.username + " !";
+        }
     }
 }
