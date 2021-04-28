@@ -151,5 +151,21 @@ namespace ClothesShop
 		    cmd.ExecuteNonQuery();
 		    conn.Close();
 		}
+
+		public static void saveWishlistToDb(string username, string id)
+		{
+			int id3 = Convert.ToInt32(id);
+			string query = "INSERT INTO Wishlist(username, productID) VALUES(@username, @id)";
+			SQLiteConnection conn;
+			conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
+			conn.Open();
+			SQLiteCommand cmd = new SQLiteCommand(query, conn);
+			cmd.Parameters.AddWithValue("@username", username);
+			cmd.Parameters.AddWithValue("@id", id3);
+			cmd.ExecuteNonQuery();
+			conn.Close();
+		}
+
+
 	}
 }

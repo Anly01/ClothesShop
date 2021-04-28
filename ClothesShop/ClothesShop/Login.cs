@@ -60,7 +60,7 @@ namespace ClothesShop
             ArrayList usernameList = SQLAccess.getUsername();
             if (username=="" && password == "")
             {
-                MessageBox.Show("blom isi ntol");
+                MessageBox.Show("Input your username and password");
             } else
             {
                 string query = "SELECT * FROM Users WHERE username= @user AND passwd= @password";

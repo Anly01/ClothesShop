@@ -30,8 +30,8 @@ namespace ClothesShop
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Products));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -50,21 +50,21 @@ namespace ClothesShop
             this.label11 = new System.Windows.Forms.Label();
             this.closebtn = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.sizeBox = new System.Windows.Forms.Panel();
+            this.size = new System.Windows.Forms.TextBox();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.usernamelbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.addtowish = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.priceBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.qtyBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.s = new System.Windows.Forms.DataGridView();
+            this.clothNameBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
@@ -76,8 +76,8 @@ namespace ClothesShop
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.s)).BeginInit();
+            this.sizeBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -131,9 +131,9 @@ namespace ClothesShop
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(72, 15);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 39);
+            this.label7.Size = new System.Drawing.Size(120, 39);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Cart";
+            this.label7.Text = "Orders";
             // 
             // panel4
             // 
@@ -167,6 +167,7 @@ namespace ClothesShop
             this.label8.Size = new System.Drawing.Size(121, 39);
             this.label8.TabIndex = 13;
             this.label8.Text = "Wishlist";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // pictureBox5
             // 
@@ -189,6 +190,7 @@ namespace ClothesShop
             this.label9.Size = new System.Drawing.Size(125, 39);
             this.label9.TabIndex = 14;
             this.label9.Text = "Logout";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // panel5
             // 
@@ -282,30 +284,74 @@ namespace ClothesShop
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
+            // sizeBox
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.s);
-            this.panel2.Controls.Add(this.usernamelbl);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.closebtn);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(324, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(960, 715);
-            this.panel2.TabIndex = 7;
+            this.sizeBox.BackColor = System.Drawing.Color.White;
+            this.sizeBox.Controls.Add(this.size);
+            this.sizeBox.Controls.Add(this.dgvProduct);
+            this.sizeBox.Controls.Add(this.usernamelbl);
+            this.sizeBox.Controls.Add(this.label1);
+            this.sizeBox.Controls.Add(this.addtowish);
+            this.sizeBox.Controls.Add(this.label10);
+            this.sizeBox.Controls.Add(this.priceBox);
+            this.sizeBox.Controls.Add(this.label5);
+            this.sizeBox.Controls.Add(this.qtyBox);
+            this.sizeBox.Controls.Add(this.button1);
+            this.sizeBox.Controls.Add(this.button3);
+            this.sizeBox.Controls.Add(this.label3);
+            this.sizeBox.Controls.Add(this.label2);
+            this.sizeBox.Controls.Add(this.clothNameBox);
+            this.sizeBox.Controls.Add(this.label11);
+            this.sizeBox.Controls.Add(this.closebtn);
+            this.sizeBox.Controls.Add(this.pictureBox1);
+            this.sizeBox.Location = new System.Drawing.Point(324, 12);
+            this.sizeBox.Name = "sizeBox";
+            this.sizeBox.Size = new System.Drawing.Size(960, 715);
+            this.sizeBox.TabIndex = 7;
+            // 
+            // size
+            // 
+            this.size.Enabled = false;
+            this.size.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.size.Location = new System.Drawing.Point(360, 156);
+            this.size.Name = "size";
+            this.size.Size = new System.Drawing.Size(129, 42);
+            this.size.TabIndex = 44;
+            // 
+            // dgvProduct
+            // 
+            this.dgvProduct.AllowUserToAddRows = false;
+            this.dgvProduct.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvProduct.Location = new System.Drawing.Point(36, 309);
+            this.dgvProduct.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvProduct.MultiSelect = false;
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.ReadOnly = true;
+            this.dgvProduct.RowHeadersVisible = false;
+            this.dgvProduct.RowHeadersWidth = 62;
+            this.dgvProduct.RowTemplate.Height = 100;
+            this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProduct.Size = new System.Drawing.Size(900, 390);
+            this.dgvProduct.TabIndex = 43;
+            this.dgvProduct.TabStop = false;
+            this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProductCellClick);
             // 
             // usernamelbl
             // 
@@ -329,35 +375,18 @@ namespace ClothesShop
             this.label1.TabIndex = 41;
             this.label1.Text = "Welcome,";
             // 
-            // button2
+            // addtowish
             // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(550, 238);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(182, 58);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Add to Wishlist";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "SS",
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL",
-            "XXXL"});
-            this.comboBox1.Location = new System.Drawing.Point(358, 156);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 42);
-            this.comboBox1.TabIndex = 39;
-            this.comboBox1.Text = "Size";
+            this.addtowish.BackColor = System.Drawing.Color.Gray;
+            this.addtowish.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addtowish.ForeColor = System.Drawing.Color.White;
+            this.addtowish.Location = new System.Drawing.Point(550, 238);
+            this.addtowish.Name = "addtowish";
+            this.addtowish.Size = new System.Drawing.Size(182, 58);
+            this.addtowish.TabIndex = 40;
+            this.addtowish.Text = "Add to Wishlist";
+            this.addtowish.UseVisualStyleBackColor = false;
+            this.addtowish.Click += new System.EventHandler(this.addtowish_Click);
             // 
             // label10
             // 
@@ -370,13 +399,14 @@ namespace ClothesShop
             this.label10.TabIndex = 38;
             this.label10.Text = "Price";
             // 
-            // textBox4
+            // priceBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.textBox4.Location = new System.Drawing.Point(36, 248);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(295, 42);
-            this.textBox4.TabIndex = 37;
+            this.priceBox.Enabled = false;
+            this.priceBox.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.priceBox.Location = new System.Drawing.Point(36, 248);
+            this.priceBox.Name = "priceBox";
+            this.priceBox.Size = new System.Drawing.Size(295, 42);
+            this.priceBox.TabIndex = 37;
             // 
             // label5
             // 
@@ -389,13 +419,13 @@ namespace ClothesShop
             this.label5.TabIndex = 36;
             this.label5.Text = "Quantity";
             // 
-            // textBox3
+            // qtyBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.textBox3.Location = new System.Drawing.Point(360, 249);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(129, 42);
-            this.textBox3.TabIndex = 35;
+            this.qtyBox.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.qtyBox.Location = new System.Drawing.Point(360, 249);
+            this.qtyBox.Name = "qtyBox";
+            this.qtyBox.Size = new System.Drawing.Size(129, 42);
+            this.qtyBox.TabIndex = 35;
             // 
             // button1
             // 
@@ -418,7 +448,7 @@ namespace ClothesShop
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(182, 59);
             this.button3.TabIndex = 33;
-            this.button3.Text = "Add to Cart";
+            this.button3.Text = "Order";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // label3
@@ -443,44 +473,14 @@ namespace ClothesShop
             this.label2.TabIndex = 31;
             this.label2.Text = "Cloth name";
             // 
-            // textBox1
+            // clothNameBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.textBox1.Location = new System.Drawing.Point(36, 156);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(293, 42);
-            this.textBox1.TabIndex = 30;
-            // 
-            // s
-            // 
-            this.s.AllowUserToAddRows = false;
-            this.s.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.s.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.s.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.s.DefaultCellStyle = dataGridViewCellStyle4;
-            this.s.Location = new System.Drawing.Point(36, 315);
-            this.s.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.s.Name = "s";
-            this.s.ReadOnly = true;
-            this.s.RowHeadersVisible = false;
-            this.s.RowHeadersWidth = 62;
-            this.s.RowTemplate.Height = 100;
-            this.s.Size = new System.Drawing.Size(900, 384);
-            this.s.TabIndex = 43;
+            this.clothNameBox.Enabled = false;
+            this.clothNameBox.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.clothNameBox.Location = new System.Drawing.Point(36, 156);
+            this.clothNameBox.Name = "clothNameBox";
+            this.clothNameBox.Size = new System.Drawing.Size(293, 42);
+            this.clothNameBox.TabIndex = 30;
             // 
             // Products
             // 
@@ -488,7 +488,7 @@ namespace ClothesShop
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 740);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.sizeBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Products";
@@ -511,9 +511,9 @@ namespace ClothesShop
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.s)).EndInit();
+            this.sizeBox.ResumeLayout(false);
+            this.sizeBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -537,21 +537,21 @@ namespace ClothesShop
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label closebtn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel sizeBox;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox priceBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox qtyBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox clothNameBox;
+        private System.Windows.Forms.Button addtowish;
         private System.Windows.Forms.Label usernamelbl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView s;
+        private System.Windows.Forms.DataGridView dgvProduct;
+        private System.Windows.Forms.TextBox size;
     }
 }

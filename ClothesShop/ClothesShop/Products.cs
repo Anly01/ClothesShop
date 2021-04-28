@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,12 +30,12 @@ namespace ClothesShop
 			SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
 			DataTable dt = new DataTable();
 			adapter.Fill(dt);
-			s.DataSource = dt;
-		    s.Columns["adminID"].Visible = false;
+			dgvProduct.DataSource = dt;
+		    dgvProduct.Columns["adminID"].Visible = false;
 
 			DataGridViewImageColumn imageCol = new DataGridViewImageColumn();
 			imageCol.HeaderText = "Image";
-			imageCol = (DataGridViewImageColumn)s.Columns[0];
+			imageCol = (DataGridViewImageColumn)dgvProduct.Columns[0];
 			imageCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
 
 			/*SQLiteCommand cmd2 = new SQLiteCommand("SELECT image FROM Cloth", conn);
@@ -60,5 +61,42 @@ namespace ClothesShop
         {
             usernamelbl.Text = Login.username + " !";
         }
+
+
+		//click wishlist button
+        private void label8_Click(object sender, EventArgs e)
+        {
+			wishlist log = new wishlist();
+			log.Show();
+			this.Hide();
+		}
+
+		//click logout button
+        private void label9_Click(object sender, EventArgs e)
+        {
+			Login log = new Login();
+			log.Show();
+			this.Hide();
+        }
+		void DgvProductCellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			if (dgvProduct.SelectedRows.Count > 0)
+			{
+				int index = dgvProduct.CurrentCell.RowIndex;
+				clothNameBox.Text = dgvProduct.Rows[index].Cells[2].Value.ToString();
+				size.Text = dgvProduct.Rows[index].Cells[4].Value.ToString();
+				qtyBox.Text = dgvProduct.Rows[index].Cells[5].Value.ToString();
+				priceBox.Text = dgvProduct.Rows[index].Cells[3].Value.ToString();
+			}
+		}
+
+        private void addtowish_Click(object sender, EventArgs e)
+        {
+			int index = dgvProduct.CurrentCell.RowIndex;
+			string id = dgvProduct.Rows[index].Cells[1].Value.ToString();
+			string username = Login.username;
+			SQLAccess.saveWishlistToDb(username, id);
+			
+		}
     }
 }
