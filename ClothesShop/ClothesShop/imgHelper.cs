@@ -2,6 +2,7 @@
 using System.IO;
 using System.Data.SQLite;
 using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace ClothesShop
 {
@@ -12,9 +13,19 @@ namespace ClothesShop
 	{
 		public static byte[] ImageToByte(Image img)
 		{
-		   	MemoryStream ms = new MemoryStream();
-			img.Save(ms, img.RawFormat);
-			return ms.ToArray();
+			try
+			{
+			   	MemoryStream ms = new MemoryStream();
+				img.Save(ms, img.RawFormat);
+				return ms.ToArray();
+			}
+			catch
+			{
+				MemoryStream ms = new MemoryStream();
+				Bitmap image = new Bitmap(img);
+				image.Save(ms, ImageFormat.Bmp);
+				return ms.ToArray();
+			}
 		}
 		
 		public static Image ByteToImage(byte[] bytes)

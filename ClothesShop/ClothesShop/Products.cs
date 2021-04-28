@@ -30,6 +30,7 @@ namespace ClothesShop
 			DataTable dt = new DataTable();
 			adapter.Fill(dt);
 			s.DataSource = dt;
+		    s.Columns["adminID"].Visible = false;
 
 			DataGridViewImageColumn imageCol = new DataGridViewImageColumn();
 			imageCol.HeaderText = "Image";

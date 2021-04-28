@@ -113,5 +113,43 @@ namespace ClothesShop
 		    cmd.ExecuteNonQuery();
 		    conn.Close();
 		}
+		
+		public static void editClothDb(string id, Image img, string clothName, string price,
+		                                 string size, string qty)
+		{
+			int id2 = Convert.ToInt32(id);
+			int quantity = Convert.ToInt32(qty);
+			int price2 = Convert.ToInt32(price);
+			string query = "UPDATE Cloth SET image = @img, name = @name, price = @price, size = @size, quantity = @qty WHERE productID = @id";
+			
+			SQLiteConnection conn;
+			conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
+		    conn.Open();
+		    SQLiteCommand cmd = new SQLiteCommand(query, conn);
+		    SQLiteParameter parameter = new SQLiteParameter("@img", DbType.Binary);
+			parameter.Value = imgHelper.ImageToByte(img);
+			cmd.Parameters.Add(parameter);
+		    cmd.Parameters.AddWithValue("@name", clothName);
+		    cmd.Parameters.AddWithValue("@price", price2);
+		    cmd.Parameters.AddWithValue("@size", size);
+		    cmd.Parameters.AddWithValue("@qty", quantity);
+		    cmd.Parameters.AddWithValue("@id", id2);
+		    cmd.ExecuteNonQuery();
+		    conn.Close();
+		}
+		
+		public static void deleteClothDb(string id)
+		{
+			int id2 = Convert.ToInt32(id);
+			string query = "DELETE FROM Cloth WHERE productID = @id";
+			
+			SQLiteConnection conn;
+			conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
+		    conn.Open();
+		    SQLiteCommand cmd = new SQLiteCommand(query, conn);
+		    cmd.Parameters.AddWithValue("@id", id2);
+		    cmd.ExecuteNonQuery();
+		    conn.Close();
+		}
 	}
 }

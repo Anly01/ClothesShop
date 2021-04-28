@@ -41,7 +41,7 @@ namespace ClothesShop
 		    DataTable dt = new DataTable();
 		    adapter.Fill(dt);
 		    dgvCloth.DataSource = dt;
-		    
+		    dgvCloth.Columns["adminID"].Visible = false;
 		    DataGridViewImageColumn imageCol = new DataGridViewImageColumn();
 		    imageCol.HeaderText = "Image";
 		    imageCol = (DataGridViewImageColumn)dgvCloth.Columns[0];
@@ -57,7 +57,6 @@ namespace ClothesShop
 		    	dgvCloth.Rows[0].Cells[0].Value = new Bitmap(img);
 		    	counter++;
 		    }*/
-		    
 		    conn.Close();
         }
 		
@@ -109,6 +108,15 @@ namespace ClothesShop
     		
     		return true;
     	}
+        
+        private void reset()
+        {
+        	clothImg.Image = null;
+			clothNameBox.Text = "";
+			qtyBox.Text = "";
+			sizeBox.Text = "Size";
+			priceBox.Text = "";
+        }
         
         //click button exit
         private void label11_Click(object sender, System.EventArgs e)
@@ -173,11 +181,86 @@ namespace ClothesShop
 		
 		void ResetBtnClick(object sender, EventArgs e)
 		{
-			clothImg.Image = null;
-			clothNameBox.Text = "";
-			qtyBox.Text = "";
-			sizeBox.Text = "Size";
-			priceBox.Text = "";
+			reset();
+		}
+		
+		void ClearSelectClick(object sender, EventArgs e)
+		{
+			reset();
+			dgvCloth.ClearSelection();
+		}
+		
+		void EditBtnClick(object sender, EventArgs e)
+		{
+			if (dgvCloth.SelectedRows.Count > 0)
+			{
+				
+				int index = dgvCloth.CurrentCell.RowIndex;
+				/*byte[] test = (byte[])dgvCloth.Rows[index].Cells[0].Value;
+				clothImg.SizeMode = PictureBoxSizeMode.Zoom;
+				clothImg.Image = imgHelper.ByteToImage(test);*/
+				Image img = clothImg.Image;
+				string clothName = clothNameBox.Text.Trim();
+				string size = sizeBox.Text.Trim();
+				string qty = qtyBox.Text.Trim();
+				string price = priceBox.Text.Trim();
+				string id = dgvCloth.Rows[index].Cells[1].Value.ToString();
+				
+				if (checkImg(img) && checkClothName(clothName) && checkSize(size) &&
+			    checkNumber(qty) && checkNumber(price))
+				{
+					MessageBox.Show("Nice");
+					SQLAccess.editClothDb(id, img, clothName, price, size, qty);
+					populate();
+				}
+			}
+			else
+			{
+				MessageBox.Show("Please select the row");
+			}
+		}
+		
+		void DgvClothDataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+		{
+			dgvCloth.ClearSelection();
+		}
+		
+		void DgvClothCellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			if (dgvCloth.SelectedRows.Count > 0)
+			{
+				int index = dgvCloth.CurrentCell.RowIndex;
+				byte[] test = (byte[])dgvCloth.Rows[index].Cells[0].Value;
+				clothImg.SizeMode = PictureBoxSizeMode.Zoom;
+				clothImg.Image = imgHelper.ByteToImage(test);
+				clothNameBox.Text = dgvCloth.Rows[index].Cells[2].Value.ToString();
+				sizeBox.Text = dgvCloth.Rows[index].Cells[4].Value.ToString();
+				qtyBox.Text = dgvCloth.Rows[index].Cells[5].Value.ToString();
+				priceBox.Text = dgvCloth.Rows[index].Cells[3].Value.ToString();
+			}
+		}
+		
+		void DeleteBtnClick(object sender, EventArgs e)
+		{
+			if (dgvCloth.SelectedRows.Count > 0)
+			{
+				int index = dgvCloth.CurrentCell.RowIndex;
+				string id = dgvCloth.Rows[index].Cells[1].Value.ToString();
+				
+				var result = MessageBox.Show("Are you sure you want to delete selected row ?", "Delete", MessageBoxButtons.YesNoCancel);
+				
+				if (result == DialogResult.Yes)
+				{
+					MessageBox.Show("Deleted");
+					SQLAccess.deleteClothDb(id);
+					reset();
+					populate();
+				}
+			}
+			else
+			{
+				MessageBox.Show("Please select the row");
+			}
 		}
     }
 }
