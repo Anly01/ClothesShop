@@ -76,5 +76,10 @@ namespace ClothesShop
         }
 
 
+        
+        void DgvWishlistDataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+			dgvWishlist.ClearSelection();
+        }
     }
 }

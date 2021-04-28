@@ -211,6 +211,7 @@ namespace ClothesShop
 				{
 					MessageBox.Show("Nice");
 					SQLAccess.editClothDb(id, img, clothName, price, size, qty);
+					reset();
 					populate();
 				}
 			}

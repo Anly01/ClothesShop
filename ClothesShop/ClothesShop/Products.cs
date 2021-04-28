@@ -98,5 +98,10 @@ namespace ClothesShop
 			SQLAccess.saveWishlistToDb(username, id);
 			
 		}
+        
+        void DgvProductDataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+        	dgvProduct.ClearSelection();
+        }
     }
 }
