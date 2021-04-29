@@ -82,6 +82,22 @@ namespace ClothesShop
             adapterUser.Fill(usertotal);
             ourUser.Text = usertotal.Rows[0][0].ToString();
             conn.Close();
+
+            //untuk total amount uang
+            SQLiteCommand cmdAmount = new SQLiteCommand("select sum(price) from Orders", conn);
+            SQLiteDataAdapter adapterAmount = new SQLiteDataAdapter(cmdAmount);
+            DataTable amount = new DataTable();
+            adapterAmount.Fill(amount);
+            amountLbl.Text = amount.Rows[0][0].ToString();
+            conn.Close();
+
+            //untuk total order
+            SQLiteCommand cmdOrder = new SQLiteCommand("select count(*) from Orders", conn);
+            SQLiteDataAdapter adapterOrder = new SQLiteDataAdapter(cmdOrder);
+            DataTable order = new DataTable();
+            adapterOrder.Fill(order);
+            amountOrder.Text = order.Rows[0][0].ToString();
+            conn.Close();
         }
         
        

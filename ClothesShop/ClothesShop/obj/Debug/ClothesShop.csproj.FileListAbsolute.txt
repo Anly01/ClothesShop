@@ -104,3 +104,5 @@ C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.wishlist.resources
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.UserOrder.resources
 C:\Users\Sugi_Huang\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.AdminOrder.resources
+C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.AdminOrder.resources
+C:\Users\User\Desktop\ClothesShop\ClothesShop\ClothesShop\obj\Debug\ClothesShop.UserOrder.resources
