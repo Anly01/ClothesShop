@@ -141,6 +141,10 @@
     <Compile Include="TestUploadImg.Designer.cs">
       <DependentUpon>TestUploadImg.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserOrder.cs" />
+    <Compile Include="UserOrder.Designer.cs">
+      <DependentUpon>UserOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +200,9 @@
     </Compile>
     <EmbeddedResource Include="TestUploadImg.resx">
       <DependentUpon>TestUploadImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserOrder.resx">
+      <DependentUpon>UserOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.cs</DependentUpon>

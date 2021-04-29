@@ -27,5 +27,10 @@ namespace ClothesShop
     		
     		return true;
     	}
+		
+		public static int ToNumber(string x)
+		{
+			return Convert.ToInt32(x);
+		}
 	}
 }

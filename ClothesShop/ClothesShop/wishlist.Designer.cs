@@ -297,6 +297,7 @@ namespace ClothesShop
         	this.label7.Size = new System.Drawing.Size(76, 24);
         	this.label7.TabIndex = 12;
         	this.label7.Text = "Orders";
+        	this.label7.Click += new System.EventHandler(this.Label7Click);
         	// 
         	// pictureBox4
         	// 

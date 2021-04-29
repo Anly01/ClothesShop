@@ -74,12 +74,20 @@ namespace ClothesShop
             log.Show();
             this.Hide();
         }
-
+		
+        void Label7Click(object sender, EventArgs e)
+        {
+			UserOrder log = new UserOrder();
+        	log.Show();
+        	this.Hide();        	
+        }
 
         
         void DgvWishlistDataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
 			dgvWishlist.ClearSelection();
         }
+        
+        
     }
 }

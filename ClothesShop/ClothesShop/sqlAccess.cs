@@ -166,6 +166,51 @@ namespace ClothesShop
 			conn.Close();
 		}
 
-
+		public static void saveOrderToDbAndUpdate(string clothName, int totalPrice, string userQty, string username, string id, string itemQty)
+		{
+			int id2 = Convert.ToInt32(id);
+			int userQty2 = Convert.ToInt32(userQty);
+			string query = "INSERT INTO Orders(name, price, quantity, username, productID) VALUES(@name, @price, @qty, @username, @id)";
+			
+			SQLiteConnection conn;
+			conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
+		    conn.Open();
+		    SQLiteCommand cmd = new SQLiteCommand(query, conn);
+		    cmd.Parameters.AddWithValue("@name", clothName);
+		    cmd.Parameters.AddWithValue("@price", totalPrice);
+		    cmd.Parameters.AddWithValue("@qty", userQty2);
+		    cmd.Parameters.AddWithValue("@username", username);
+		    cmd.Parameters.AddWithValue("@id", id2);
+		    cmd.ExecuteNonQuery();
+		    
+		    int currQty = Convert.ToInt32(itemQty) - Convert.ToInt32(userQty); 
+		    query = "UPDATE Cloth SET quantity = @qty WHERE productID = @id";
+		    cmd.CommandText = query;
+		    cmd.Parameters.AddWithValue("@qty", currQty);
+		    cmd.Parameters.AddWithValue("@id", id2);
+		    cmd.ExecuteNonQuery();
+		    conn.Close();
+		}
+		
+		public static ArrayList getWishlistProduct(string username)
+		{
+			ArrayList productList = new ArrayList();
+			int productID = 0;
+			
+			SQLiteConnection conn;
+		    conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
+		    conn.Open();
+		    SQLiteCommand cmd = new SQLiteCommand("SELECT productID FROM Wishlist WHERE username = @username", conn);
+		    cmd.Parameters.AddWithValue("@username", username);
+		    SQLiteDataReader reader = cmd.ExecuteReader();
+		    while (reader.Read())
+		    {
+		    	productID = reader.GetInt32(0);
+		    	productList.Add(productID);
+		    }
+		    conn.Close();
+		    
+		    return productList;
+		}
 	}
 }
