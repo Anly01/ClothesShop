@@ -123,8 +123,8 @@ namespace ClothesShop
 		{
 			if (dgvProduct.SelectedRows.Count > 0)
 			{
-				int index = dgvProduct.CurrentCell.RowIndex;
-				clothNameBox.Text = dgvProduct.Rows[index].Cells[2].Value.ToString();
+                int index = dgvProduct.CurrentCell.RowIndex;
+                clothNameBox.Text = dgvProduct.Rows[index].Cells[2].Value.ToString();
 				size.Text = dgvProduct.Rows[index].Cells[4].Value.ToString();
 				priceBox.Text = dgvProduct.Rows[index].Cells[3].Value.ToString();
 			}

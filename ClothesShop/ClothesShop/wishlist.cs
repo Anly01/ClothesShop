@@ -39,6 +39,7 @@ namespace ClothesShop
             imageCol.HeaderText = "Image";
             imageCol = (DataGridViewImageColumn)dgvWishlist.Columns[0];
             imageCol.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            dgvWishlist.Columns["productID"].Visible = false;
 
             /*SQLiteCommand cmd2 = new SQLiteCommand("SELECT image FROM Cloth", conn);
 		    // cmd.CommandText = "SELECT image FROM Cloth";
