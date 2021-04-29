@@ -166,6 +166,21 @@ namespace ClothesShop
 			conn.Close();
 		}
 
+		public static void deleteWishlist(string username, string id)
+		{
+			int id4 = Convert.ToInt32(id);
+			string query = "DELETE FROM Wishlist WHERE username = @username AND productID = @id";
+
+			SQLiteConnection conn;
+			conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
+			conn.Open();
+			SQLiteCommand cmd = new SQLiteCommand(query, conn);
+			cmd.Parameters.AddWithValue("@username", username);
+			cmd.Parameters.AddWithValue("@id", id4);
+			cmd.ExecuteNonQuery();
+			conn.Close();
+		}
+
 		public static void saveOrderToDbAndUpdate(string clothName, int totalPrice, string userQty, string username, string id, string itemQty)
 		{
 			int id2 = Convert.ToInt32(id);

@@ -29,7 +29,7 @@ namespace ClothesShop
             SQLiteConnection conn;
             conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
             conn.Open();
-            SQLiteCommand cmd = new SQLiteCommand("SELECT image, name, size, price FROM Wishlist JOIN Cloth ON Cloth.productID = Wishlist.productID WHERE username = @username", conn);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT image, name, size, price, Cloth.productID FROM Wishlist JOIN Cloth ON Cloth.productID = Wishlist.productID WHERE username = @username", conn);
             cmd.Parameters.AddWithValue("@username", Login.username);
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -87,7 +87,28 @@ namespace ClothesShop
         {
 			dgvWishlist.ClearSelection();
         }
-        
-        
+
+        void deleteBtn_Click(object sender, EventArgs e)
+        {
+            if (dgvWishlist.SelectedRows.Count > 0)
+            {
+                int index = dgvWishlist.CurrentCell.RowIndex;
+                string id = dgvWishlist.Rows[index].Cells[4].Value.ToString();
+                string username = Login.username;
+
+                var result = MessageBox.Show("Are you sure you want to delete selected row ?", "Delete", MessageBoxButtons.YesNoCancel);
+
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("Deleted");
+                    SQLAccess.deleteWishlist(username, id);
+                    populate();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select the row");
+            }
+        }
     }
 }
