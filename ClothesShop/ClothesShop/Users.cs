@@ -66,19 +66,26 @@ namespace ClothesShop
         }
 
 		//click dashboard menubar
-        private void label8_Click(object sender, EventArgs e)
-        {
+        private void Label8Click(object sender, EventArgs e)
+		{
 			Dashboard log = new Dashboard();
 			log.Show();
-			this.Hide();
+			this.Hide();		
 		}
 
 		//click button logout
-        private void label9_Click(object sender, EventArgs e)
-        {
+		private void Label9Click(object sender, EventArgs e)
+		{
 			Login log = new Login();
 			log.Show();
-			this.Hide();
+			this.Hide();	
+		}
+		
+		void OrderClick(object sender, EventArgs e)
+		{
+			AdminOrder log = new AdminOrder();
+            log.Show();
+            this.Hide();
 		}
     }
 }

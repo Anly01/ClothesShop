@@ -147,6 +147,13 @@ namespace ClothesShop
             log.Show();
             this.Hide();
         }
+        
+        private void OrderClick(object sender, EventArgs e)
+		{
+			AdminOrder log = new AdminOrder();
+            log.Show();
+            this.Hide();		
+		}
 		
 		void SaveBtnClick(object sender, System.EventArgs e)
 		{
@@ -263,5 +270,7 @@ namespace ClothesShop
 				MessageBox.Show("Please select the row");
 			}
 		}
+		
+		
     }
 }

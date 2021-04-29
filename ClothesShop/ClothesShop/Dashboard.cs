@@ -50,13 +50,20 @@ namespace ClothesShop
         }
 
         //click button logout
-        private void label9_Click(object sender, EventArgs e)
+        private void Label9Click(object sender, EventArgs e)
         {
-            Login log = new Login();
+			Login log = new Login();
             log.Show();
-            this.Hide();
+            this.Hide();        	
         }
-
+        
+        private void OrderClick(object sender, EventArgs e)
+        {
+        	AdminOrder log = new AdminOrder();
+            log.Show();
+            this.Hide();	
+        }
+       
         SQLiteConnection conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
         private void Dashboard_Load(object sender, EventArgs e)
         {
@@ -76,5 +83,7 @@ namespace ClothesShop
             ourUser.Text = usertotal.Rows[0][0].ToString();
             conn.Close();
         }
+        
+       
     }
 }
