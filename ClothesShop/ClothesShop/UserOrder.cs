@@ -39,7 +39,11 @@ namespace ClothesShop
 		
 		void Label11Click(object sender, EventArgs e)
 		{
-			Application.Exit();
+			var result = MessageBox.Show("Are you sure you want to exit the app ?", "Exit", MessageBoxButtons.YesNo);
+			if (result == DialogResult.Yes)
+			{
+				Application.Exit();
+			}
 		}
 		
 		void Label6Click(object sender, EventArgs e)
@@ -60,9 +64,13 @@ namespace ClothesShop
 		
 		void Label9Click(object sender, EventArgs e)
 		{
-			Login log = new Login();
-			log.Show();
-			this.Hide();
+			var result = MessageBox.Show("Are you sure you want to logout ?", "Logout", MessageBoxButtons.YesNo);
+			if (result == DialogResult.Yes)
+			{
+				Login log = new Login();
+				log.Show();
+				this.Hide();
+			}
 		}
 		
 		void UserOrder_Load(object sender, EventArgs e)

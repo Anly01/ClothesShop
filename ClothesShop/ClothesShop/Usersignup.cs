@@ -130,7 +130,11 @@ namespace ClothesShop
 
         private void closebtn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var result = MessageBox.Show("Are you sure you want to exit the app ?", "Exit", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
 
         }
 
