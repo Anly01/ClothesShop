@@ -170,7 +170,6 @@ namespace ClothesShop
         	if (dgvProduct.SelectedRows.Count > 0)
         	{
 				int index = dgvProduct.CurrentCell.RowIndex;
-        		string clothName = clothNameBox.Text;
         		string price = priceBox.Text;
         		string userQty = qtyBox.Text.Trim();
         		string sizes = size.Text;
@@ -181,7 +180,7 @@ namespace ClothesShop
         		if (checkQty(userQty, itemQty))
         		{
         			int totalPrice = Convert.ToInt32(userQty) * Convert.ToInt32(price);
-        			SQLAccess.saveOrderToDbAndUpdate(clothName, totalPrice, userQty, username, id, itemQty);
+        			SQLAccess.saveOrderToDbAndUpdate(totalPrice, userQty, username, id, itemQty);
         			populate();
         		}
         	}

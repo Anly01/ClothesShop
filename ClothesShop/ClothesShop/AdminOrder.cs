@@ -84,7 +84,7 @@ namespace ClothesShop
 			SQLiteConnection conn;
 			conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
 			conn.Open();
-			SQLiteCommand cmd = new SQLiteCommand("SELECT username, image, Orders.productID, Orders.name, Orders.price, Orders.quantity FROM Orders JOIN Cloth ON Cloth.productID = Orders.productID ORDER BY username", conn);
+			SQLiteCommand cmd = new SQLiteCommand("SELECT username, image, Orders.productID, Cloth.name, Orders.price, Orders.quantity FROM Orders JOIN Cloth ON Cloth.productID = Orders.productID ORDER BY username", conn);
 			SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
 			DataTable dt = new DataTable();
 			adapter.Fill(dt);

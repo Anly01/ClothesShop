@@ -181,17 +181,16 @@ namespace ClothesShop
 			conn.Close();
 		}
 
-		public static void saveOrderToDbAndUpdate(string clothName, int totalPrice, string userQty, string username, string id, string itemQty)
+		public static void saveOrderToDbAndUpdate(int totalPrice, string userQty, string username, string id, string itemQty)
 		{
 			int id2 = Convert.ToInt32(id);
 			int userQty2 = Convert.ToInt32(userQty);
-			string query = "INSERT INTO Orders(name, price, quantity, username, productID) VALUES(@name, @price, @qty, @username, @id)";
+			string query = "INSERT INTO Orders(price, quantity, username, productID) VALUES(@price, @qty, @username, @id)";
 			
 			SQLiteConnection conn;
 			conn = new SQLiteConnection("Data Source=ClothShop.db;Version=3;");
 		    conn.Open();
 		    SQLiteCommand cmd = new SQLiteCommand(query, conn);
-		    cmd.Parameters.AddWithValue("@name", clothName);
 		    cmd.Parameters.AddWithValue("@price", totalPrice);
 		    cmd.Parameters.AddWithValue("@qty", userQty2);
 		    cmd.Parameters.AddWithValue("@username", username);
