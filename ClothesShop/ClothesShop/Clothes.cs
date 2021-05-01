@@ -174,7 +174,7 @@ namespace ClothesShop
 			if (checkImg(img) && checkClothName(clothName) && checkSize(size) &&
 			    checkNumber(qty) && checkNumber(price))
 			{
-				MessageBox.Show("Nice");
+				MessageBox.Show("Saved");
 				SQLAccess.saveClothToDb(img, clothName, price, size, qty);
 				populate();
 			}
@@ -224,7 +224,7 @@ namespace ClothesShop
 				if (checkImg(img) && checkClothName(clothName) && checkSize(size) &&
 			    checkNumber(qty) && checkNumber(price))
 				{
-					MessageBox.Show("Nice");
+					MessageBox.Show("Edited");
 					SQLAccess.editClothDb(id, img, clothName, price, size, qty);
 					reset();
 					populate();
